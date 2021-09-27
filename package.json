@@ -1,7 +1,7 @@
 {
-  "name": "smartgardens",
+  "name": "pyatnitsky",
   "version": "1.0.1",
-  "description": "smartgardens",
+  "description": "pyatnitsky",
   "main": "index.php",
   "scripts": {
     "test": "editorconfig-checker",
