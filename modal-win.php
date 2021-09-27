@@ -6,20 +6,27 @@
 		<div class="popup__body">
 			<div class="popup__close"></div>
 			<div class="popup__item d-flex">
-				<img src="<?php echo get_template_directory_uri(); ?>/img/popup-img.jpg" alt="">
+				<div class="popup__img">
+					<picture>
+						<source srcset="<?php echo get_template_directory_uri(); ?>/img/popup.webp" type="image/webp"><img src="<?php echo get_template_directory_uri(); ?>/img/popup.jpg?_v=1632757662937" alt="">
+					</picture>
+				</div>
 				<div class="popup__form-block">
-					<h2>Заявка на обратный звонок</h2>
+					<h2>Заказать звонок</h2>
 					<div class="SendetMsg" style="display:none;">
 						Ваше сообщение успешно отправлено.
 					</div>
 					<div class="headen_form_blk">
-						<p>Оставьте заявку и мы свяжемся с вами в течении 15 минут</p>
-						<form action="#" class="popup__form">
-							<input type="text" name="name" placeholder="Имя" id="form-callback-name" class="popup__form-input input">
-							<input type="tel" name="tel" placeholder="Телефон*" id="form-callback-tel" class="popup__form-input input">
-							<input type="text" name="email" placeholder="Email" id="form-callback-email" class="popup__form-input input">
-							<p>Заполняя данную форму вы соглашаетесь с <a href="<?php echo get_permalink(452); ?>">политикой конфиденциальности</a></p>
-							<button class="popup__form-btn newButton btn">Отправить заявку</button>
+						<p class="popup__notific">Оставьте заявку и мы свяжемся с Вами в течении 15 минут</p>
+						<form action="#" class="form">
+							<div class="form__line">
+								<input id="name" autocomplete="off" type="text" name="form[]" data-error="Ошибка" data-value="Имя" class="popup__form-input input _req">
+								<input id="tel2" autocomplete="off" type="text" name="form[]" data-error="Ошибка" data-value="Телефон" class="popup__form-input input _phone _req">
+								<input id="email" autocomplete="off" type="text" name="form[]" data-error="Ошибка" data-value="Email" class="popup__form-input input _email _req">
+							</div>
+							<p class="popup__policy">Заполняя данную форму вы соглашаетесь с <a href="#">политикой
+									конфиденциальности</a></p>
+							<button class="popup__form-btn form__btn btn">Заказать</button>
 						</form>
 					</div>
 				</div>

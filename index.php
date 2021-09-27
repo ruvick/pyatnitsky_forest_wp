@@ -227,7 +227,7 @@
 
 	<section id="follow-sec" class="follow-sec">
 		<div class="_container">
-			<div class="follow-sec__bg d-flex">
+			<a href="<?php echo carbon_get_theme_option('as_insta'); ?>" class="follow-sec__bg d-flex">
 				<div class="follow-sec__img-tel">
 					<picture>
 						<source srcset="<?php echo get_template_directory_uri(); ?>/img/instagram/01.webp" type="image/webp"><img src="<?php echo get_template_directory_uri(); ?>/img/instagram/01.png?_v=1632757662937" alt="">
@@ -235,14 +235,14 @@
 				</div>
 				<div class="follow-sec__title">
 					<h2>Следите за нашим проектом в Instagram</h2>
-					<a href="#" class="follow-sec__link"></a>
+					<div class="follow-sec__link"></div>
 				</div>
 				<div class="follow-sec__img-house">
 					<picture>
 						<source srcset="<?php echo get_template_directory_uri(); ?>/img/instagram/02.webp" type="image/webp"><img src="<?php echo get_template_directory_uri(); ?>/img/instagram/02.png?_v=1632757662937" alt="">
 					</picture>
 				</div>
-			</div>
+			</a>
 		</div>
 	</section>
 
@@ -251,6 +251,49 @@
 			<h2 class="title">Как добраться</h2>
 		</div>
 		<div id="map" class="index-map__map map"></div>
+		<script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+
+		<script>
+			ymaps.ready(init);
+
+			function init() {
+				var myMap = new ymaps.Map("map", {
+					// Координаты центра карты
+					center: [<?php echo carbon_get_theme_option('map_point') ?>],
+					// Масштаб карты
+					zoom: 10,
+					// Выключаем все управление картой
+					controls: []
+				});
+
+				var myGeoObjects = [];
+
+				// Указываем координаты метки
+				myGeoObjects = new ymaps.Placemark([<?php echo carbon_get_theme_option('map_point') ?>], {
+					// hintContent: '<div class="map-hint">Авто профи, Курск, ул.Комарова, 16</div>',
+					balloonContent: '<div class="map-hint"><?php echo carbon_get_theme_option('text_map') ?>',
+				}, {
+					iconLayout: 'default#image',
+					// Путь до нашей картинки
+					iconImageHref: '<?php bloginfo("template_url"); ?>/img/icons/map-marker.svg',
+					// Размеры иконки
+					iconImageSize: [26, 32],
+					// Смещение верхнего угла относительно основания иконки
+					iconImageOffset: [-25, -100]
+				});
+
+				var clusterer = new ymaps.Clusterer({
+					clusterDisableClickZoom: false,
+					clusterOpenBalloonOnClick: false,
+				});
+
+				clusterer.add(myGeoObjects);
+				myMap.geoObjects.add(clusterer);
+				// Отключим zoom
+				myMap.behaviors.disable('scrollZoom');
+
+			}
+		</script>
 	</section>
 
 	<section id="team" class="team">
@@ -360,7 +403,7 @@
 						с инфраструктурой и предложим самое выгодное предложение.
 					</p>
 				</div>
-				<a href="#" class="consult-sec__btn btn">Задать вопрос</a>
+				<a href="#callback" class="consult-sec__btn _popup-link btn">Задать вопрос</a>
 			</div>
 		</div>
 	</section>
