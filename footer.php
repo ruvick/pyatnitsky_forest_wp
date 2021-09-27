@@ -12,22 +12,15 @@
 			</div>
 
 			<div class="footer__menu-block d-flex">
-				<ul class="footer__menu footer__menu_left">
-					<li><a href="#" class="menu__link">Типовые проекты</a></li>
-					<li><a href="#" class="menu__link">Квадро</a></li>
-					<li><a href="#" class="menu__link">Коттедж 1</a></li>
-					<li><a href="#" class="menu__link">Коттедж 2</a></li>
-					<li><a href="project.html" class="menu__link">Усадьба</a></li>
-				</ul>
+				<?php wp_nav_menu(array(
+					'theme_location' => 'menu_cat', 'menu_class' => 'footer__menu footer__menu_left',
+					'container_class' => 'footer__menu footer__menu_left', 'container' => false
+				)); ?>
 
-				<ul class="footer__menu footer__menu_right">
-					<li><a href="#" class="menu__link">О проекте</a></li>
-					<li><a href="#" class="menu__link">Дома</a></li>
-					<li><a href="gallery.html" class="menu__link">Галерея</a></li>
-					<li><a href="team.html" class="menu__link">Наша команда</a></li>
-					<li><a href="#" class="menu__link">Как добраться</a></li>
-					<li><a href="#" class="menu__link">Контакты</a></li>
-				</ul>
+				<?php wp_nav_menu(array(
+					'theme_location' => 'menu_main', 'menu_class' => 'footer__menu footer__menu_right',
+					'container_class' => 'footer__menu footer__menu_right', 'container' => false
+				)); ?>
 			</div>
 
 			<div class="footer__contacts d-flex">

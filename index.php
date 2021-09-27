@@ -387,7 +387,7 @@
 				</div>
 				<div class="quest-work__title-block">
 					<h2>Хотите работать с нами?</h2>
-					<a href="#" class="quest-work__btn btn">Смотреть все вакансии</a>
+					<a href="#callback" class="quest-work__btn _popup-link btn">Смотреть все вакансии</a>
 				</div>
 			</div>
 		</div>
