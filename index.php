@@ -5,7 +5,6 @@
 <main class="page">
 
 	<section id="info" class="info">
-
 		<div class="slider-index _swiper">
 			<?
 			$pict = carbon_get_theme_option('slider_index');
@@ -31,14 +30,11 @@
 		</div>
 		<div class="swiper-button swiper-button-next"></div>
 		<div class="swiper-button swiper-button-prev"></div>
-
 	</section>
 
 	<section id="dignity" class="dignity">
 		<div class="_container">
-
 			<div class="dignity__row d-flex">
-
 				<div class="dignity__item d-flex">
 					<div class="dignity__img">
 						<picture>
@@ -50,7 +46,6 @@
 						<p>Закрытая охраняемая территория, <br> видеонаблюдение по всей территории поселка</p>
 					</div>
 				</div>
-
 				<a href="#index-map" class="dignity__item d-flex">
 					<div class="dignity__img">
 						<picture>
@@ -59,10 +54,9 @@
 					</div>
 					<div class="dignity__descp">
 						<h6>Легко добраться</h6>
-						<p>Всего 2,5 км от г. Курск. <br> 16 минут из центра города</p>
+						<p>Всего 2,5 км от г. Курск. 16 минут <br> из центра города</p>
 					</div>
 				</a>
-
 				<div class="dignity__item d-flex">
 					<div class="dignity__img">
 						<picture>
@@ -74,9 +68,7 @@
 						<p>Торговый центр, детский сад, <br> спортивная площадка, лыжероллерная трасса</p>
 					</div>
 				</div>
-
 			</div>
-
 		</div>
 	</section>
 
