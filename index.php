@@ -214,7 +214,7 @@
 					</div>
 				</div>
 			</div>
-			<a href="#" class="gallery-project__btn btn">перейти в галерею</a>
+			<a href="<?php echo get_permalink(21);?>" class="gallery-project__btn btn">перейти в галерею</a>
 		</div>
 	</section>
 
