@@ -31,6 +31,8 @@ Container::make('theme_options', __('Настройки темы', 'crb'))
           ->set_width(50),
         Field::make('text', 'slider_link', 'Ссылка в кнопке')
           ->set_width(50),
+        Field::make('text', 'slider_link_text', 'Текст в кнопке')
+          ->set_width(50),
       ))
   ))
   ->add_tab('Акции', array(

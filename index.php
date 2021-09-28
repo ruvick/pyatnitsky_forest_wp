@@ -19,7 +19,7 @@
 							<? if (!empty($item['slider_title'])) { ?>
 								<h1><? echo $item['slider_title']; ?></h1>
 								<p><? echo $item['slider_subtitle']; ?></p>
-								<a href="<? echo $item['slider_link']; ?>" class="slider-index__btn btn">узнать подробности</a>
+								<a href="<? echo $item['slider_link']; ?>" class="slider-index__btn btn"><? echo $item['slider_link_text']; ?></a>
 							<? } ?>
 						</div>
 					</div>
