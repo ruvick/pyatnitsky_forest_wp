@@ -5311,10 +5311,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
     line-height: 1.2;
   }
 
-  .index-map__map {
-    height: 350px;
-  }
-
   .follow-sec__bg {
     height: 300px;
   }
@@ -5638,10 +5634,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
   .about-project p {
     text-align: justify;
-  }
-
-  .index-map__map {
-    height: 250px;
   }
 
   .follow-sec__bg {

@@ -55,49 +55,21 @@ get_header(); ?>
 					</div>
 					<div class="project-card__specific">
 						<div class="info__charact">
-
-							<div class="info__charact-row d-flex">
-								<div class="info__charact-name">Площадь</div>
-								<div class="info__charact-line"></div>
-								<div class="info__charact-desc">370 м2</div>
-							</div>
-
-							<div class="info__charact-row d-flex">
-								<div class="info__charact-name">Этажей</div>
-								<div class="info__charact-line"></div>
-								<div class="info__charact-desc">2</div>
-							</div>
-
-							<div class="info__charact-row d-flex">
-								<div class="info__charact-name">Жилая площадь</div>
-								<div class="info__charact-line"></div>
-								<div class="info__charact-desc">170 м2</div>
-							</div>
-
-							<div class="info__charact-row d-flex">
-								<div class="info__charact-name">Площадь кухни</div>
-								<div class="info__charact-line"></div>
-								<div class="info__charact-desc">30 м2</div>
-							</div>
-
-							<div class="info__charact-row d-flex">
-								<div class="info__charact-name">Гараж</div>
-								<div class="info__charact-line"></div>
-								<div class="info__charact-desc">на 3 машины и более</div>
-							</div>
-
-							<div class="info__charact-row d-flex">
-								<div class="info__charact-name">Количество спален</div>
-								<div class="info__charact-line"></div>
-								<div class="info__charact-desc">5+</div>
-							</div>
-
-							<div class="info__charact-row d-flex">
-								<div class="info__charact-name">Назначение</div>
-								<div class="info__charact-line"></div>
-								<div class="info__charact-desc">таун-хаус</div>
-							</div>
-
+							<?	$charact = carbon_get_post_meta(get_the_ID(),'complex_charact');
+							if($charact) {
+								$charactIndex = 0;
+								foreach($charact as $items) {
+									?>
+									<div class="info__charact-row d-flex">
+										<div class="info__charact-name"><? echo $items['charact_name']; ?></div>
+										<div class="info__charact-line"></div>
+										<div class="info__charact-desc"><? echo $items['charact_desc']; ?></div>
+									</div> 
+									<?
+									$charactIndex++; 
+								}
+							}
+							?>
 						</div>
 					</div>
 					<a href="#" class="project-card__btn btn">Заказать расчет стоимости</a>

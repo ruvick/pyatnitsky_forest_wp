@@ -106,6 +106,11 @@ Container::make('theme_options', __('Настройки темы', 'crb'))
       Field::make('text', 'offer_square', 'Площадь')->set_width(50),
       Field::make('text', 'offer_price', 'Цена')->set_width(50),
       Field::make('text', 'offer_old_price', 'Цена без скидки')->set_width(50),
+    Field::make('complex', 'complex_charact', "Харрактеристики обьекта")
+      ->add_fields(array(
+        Field::make('text', 'charact_name', 'Наименование')->set_width(30),
+        Field::make('text', 'charact_desc', 'Значение')->set_width(30),
+      )),
     ));
 
 // Container::make('post_meta', 'ultra_product_cr', 'Характеристики товара')
