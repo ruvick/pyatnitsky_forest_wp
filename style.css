@@ -709,12 +709,9 @@ textarea.input {
   z-index: 2;
   width: 100%;
   height: 100%;
-  background-color: #00000035;
-}
-
-.nuar_blk:hover {
   background-color: #00000050;
 }
+
 
 .nuar_color {
   position: relative;
@@ -3973,10 +3970,12 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 .slider-index__slide {
   padding: 130px 0 180px 0;
+  position: relative;
   background-position: center !important;
   background: grey;
   background-repeat: no-repeat;
   background-size: cover;
+  min-height: 100%;
 }
 
 .slider-index__slide h1 {
@@ -3992,6 +3991,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 .slider-index__slide ._container {
+  position: relative;
+  z-index: 5000;
   padding-left: 120px;
 }
 
@@ -4016,6 +4017,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  flex: 0 1 33%;
 }
 
 .dignity__img {

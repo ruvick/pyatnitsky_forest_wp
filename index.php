@@ -14,6 +14,7 @@
 				foreach ($pict as $item) {
 			?>
 					<div class="slider-index__slide slider__slide _bgi" style="background-image: url(<?php echo wp_get_attachment_image_src($item['slider_img'], 'full')[0]; ?>);">
+						<div class="nuar_blk"></div>
 						<div class="_container">
 							<? if (!empty($item['slider_title'])) { ?>
 								<h1><? echo $item['slider_title']; ?></h1>
