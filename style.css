@@ -3968,12 +3968,15 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   position: relative;
 }
 
-._no-webp .slider-index__slide{
-  background-image: url("img/slider-index.jpg"); }
+/* ._no-webp .slider-index__slide{
+  background-image: url("img/slider-index.jpg"); } */
 
 .slider-index__slide {
   padding: 130px 0 180px 0;
   background-position: center !important;
+  background: grey;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .slider-index__slide h1 {
@@ -5793,7 +5796,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 ._webp .lg-outer .lg-has-youtube:hover .lg-video-play{ background: url(img/youtube-play.webp) no-repeat scroll 0 -60px transparent; }
 
-._webp .slider-index__slide{ background-image: url(img/slider-index.webp); }
+/* ._webp .slider-index__slide{ background-image: url(img/slider-index.webp); } */
 
 ._webp .quest-work__block-bg{ background-image: url(img/vacancies-bg.webp); }
 

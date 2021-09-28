@@ -7,38 +7,26 @@
 	<section id="info" class="info">
 
 		<div class="slider-index _swiper">
-
-			<div class="slider-index__slide slider__slide _bgi">
-				<div class="_container">
-					<h1>Строим дома на века!</h1>
-					<p>Строгая система контроля на каждом этапе строительства. <br> Узнайте о наших гарантиях!</p>
-					<a href="#" class="slider-index__btn btn">узнать подробности</a>
-				</div>
-			</div>
-
-			<div class="slider-index__slide slider__slide _bgi">
-				<div class="_container">
-					<h1>Строим дома на века!</h1>
-					<p>Строгая система контроля на каждом этапе строительства. <br> Узнайте о наших гарантиях!</p>
-					<a href="#" class="slider-index__btn btn">узнать подробности</a>
-				</div>
-			</div>
-
-			<div class="slider-index__slide slider__slide _bgi">
-				<div class="_container">
-					<h1>Строим дома на века!</h1>
-					<p>Строгая система контроля на каждом этапе строительства. <br> Узнайте о наших гарантиях!</p>
-					<a href="#" class="slider-index__btn btn">узнать подробности</a>
-				</div>
-			</div>
-
-			<div class="slider-index__slide slider__slide _bgi">
-				<div class="_container">
-					<h1>Строим дома на века!</h1>
-					<p>Строгая система контроля на каждом этапе строительства. <br> Узнайте о наших гарантиях!</p>
-					<a href="#" class="slider-index__btn btn">узнать подробности</a>
-				</div>
-			</div>
+			<?
+			$pict = carbon_get_theme_option('slider_index');
+			if ($pict) {
+				$pictIndex = 0;
+				foreach ($pict as $item) {
+			?>
+					<div class="slider-index__slide slider__slide _bgi" style="background-image: url(<?php echo wp_get_attachment_image_src($item['slider_img'], 'full')[0]; ?>);">
+						<div class="_container">
+							<? if (!empty($item['slider_title'])) { ?>
+								<h1><? echo $item['slider_title']; ?></h1>
+								<p><? echo $item['slider_subtitle']; ?></p>
+								<a href="<? echo $item['slider_link']; ?>" class="slider-index__btn btn">узнать подробности</a>
+							<? } ?>
+						</div>
+					</div>
+			<?
+					$pictIndex++;
+				}
+			}
+			?>
 		</div>
 		<div class="swiper-button swiper-button-next"></div>
 		<div class="swiper-button swiper-button-prev"></div>
