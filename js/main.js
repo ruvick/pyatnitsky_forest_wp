@@ -1602,3 +1602,10 @@ function scroll_animate(event) {
 	//If native scroll
 	//disableScroll();
 }
+
+
+$ = jQuery;
+
+// Файлы jQuery---------------------------------------------------------------------------------------------------------------
+
+$(".fancybox").fancybox();

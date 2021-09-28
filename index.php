@@ -46,11 +46,11 @@
 					</div>
 					<div class="dignity__descp">
 						<h6>Закрытый поселок</h6>
-						<p>Закрытая охраняемая территория</p>
+						<p>Закрытая охраняемая территория, <br> видеонаблюдение по всей территории поселка</p>
 					</div>
 				</div>
 
-				<div class="dignity__item d-flex">
+				<a href="#index-map" class="dignity__item d-flex">
 					<div class="dignity__img">
 						<picture>
 							<source srcset="<?php echo get_template_directory_uri(); ?>/img/dignity/02.webp" type="image/webp"><img src="<?php echo get_template_directory_uri(); ?>/img/dignity/02.jpg?_v=1632757662937" alt="">
@@ -58,9 +58,9 @@
 					</div>
 					<div class="dignity__descp">
 						<h6>Легко добраться</h6>
-						<p>Всего 2,5 км от г. Курск</p>
+						<p>Всего 2,5 км от г. Курск. <br> 16 минут из центра города</p>
 					</div>
-				</div>
+				</a>
 
 				<div class="dignity__item d-flex">
 					<div class="dignity__img">
@@ -70,7 +70,7 @@
 					</div>
 					<div class="dignity__descp">
 						<h6>Инфраструктура</h6>
-						<p>Все необходимое для жизни <br> на территории поселка;</p>
+						<p>Торговый центр, детский сад, <br> спортивная площадка, лыжероллерная трасса</p>
 					</div>
 				</div>
 
@@ -84,7 +84,14 @@
 	<section id="about-project" class="about-project">
 		<div class="_container">
 			<h2 class="title"><?php echo carbon_get_theme_option('about_home_title'); ?></h2>
+			<div class="about-project__subtitle">
 			<?php echo carbon_get_theme_option('about_home'); ?>
+			</div>
+			<a href="<?php echo get_template_directory_uri(); ?>/img/video/pyatnitsky.mp4" data-rel="media" class="about__link-video fancybox position">
+				<video class="about__video" controls="controls" loop autoplay muted poster="<?php echo get_template_directory_uri(); ?>/img/video/video.png">
+					<source src="<?php echo get_template_directory_uri(); ?>/img/video/pyatnitsky.mp4" type='video/ogg; codecs="theora, vorbis"'>
+				</video>
+			</a>
 		</div>
 	</section>
 <? } ?>
@@ -95,7 +102,7 @@
 
 			<div class="house-types__row d-flex">
 
-				<a href="#" class="house-card__body d-flex">
+				<a href="<?php echo get_permalink(30);?>" class="house-card__body d-flex">
 					<div class="house-card__img">
 						<picture>
 							<source srcset="<?php echo get_template_directory_uri(); ?>/img/card-houses/01.webp" type="image/webp"><img src="<?php echo get_template_directory_uri(); ?>/img/card-houses/01.jpg?_v=1632757662937" alt="">
@@ -114,7 +121,7 @@
 					</div>
 				</a>
 
-				<a href="#" class="house-card__body d-flex">
+				<a href="<?php echo get_permalink(30);?>" class="house-card__body d-flex">
 					<div class="house-card__img">
 						<picture>
 							<source srcset="<?php echo get_template_directory_uri(); ?>/img/card-houses/02.webp" type="image/webp"><img src="<?php echo get_template_directory_uri(); ?>/img/card-houses/02.jpg?_v=1632757662937" alt="">
@@ -133,7 +140,7 @@
 					</div>
 				</a>
 
-				<a href="#" class="house-card__body d-flex">
+				<a href="<?php echo get_permalink(30);?>" class="house-card__body d-flex">
 					<div class="house-card__img">
 						<picture>
 							<source srcset="<?php echo get_template_directory_uri(); ?>/img/card-houses/03.webp" type="image/webp"><img src="<?php echo get_template_directory_uri(); ?>/img/card-houses/03.jpg?_v=1632757662937" alt="">
@@ -152,7 +159,7 @@
 					</div>
 				</a>
 
-				<a href="#" class="house-card__body d-flex">
+				<a href="<?php echo get_permalink(30);?>" class="house-card__body d-flex">
 					<div class="house-card__img">
 						<picture>
 							<source srcset="<?php echo get_template_directory_uri(); ?>/img/card-houses/04.webp" type="image/webp"><img src="<?php echo get_template_directory_uri(); ?>/img/card-houses/04.jpg?_v=1632757662937" alt="">
@@ -172,6 +179,8 @@
 				</a>
 
 			</div>
+
+			<a href="<?php echo get_permalink(27);?>" class="house-types__btn btn">Все дома</a>
 
 		</div>
 	</section>
@@ -234,50 +243,7 @@
 		<div class="_container">
 			<h2 class="title">Как добраться</h2>
 		</div>
-		<div id="map" class="index-map__map map"></div>
-		<script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-
-		<script>
-			ymaps.ready(init);
-
-			function init() {
-				var myMap = new ymaps.Map("map", {
-					// Координаты центра карты
-					center: [<?php echo carbon_get_theme_option('map_point') ?>],
-					// Масштаб карты
-					zoom: 10,
-					// Выключаем все управление картой
-					controls: []
-				});
-
-				var myGeoObjects = [];
-
-				// Указываем координаты метки
-				myGeoObjects = new ymaps.Placemark([<?php echo carbon_get_theme_option('map_point') ?>], {
-					// hintContent: '<div class="map-hint">Авто профи, Курск, ул.Комарова, 16</div>',
-					balloonContent: '<div class="map-hint"><?php echo carbon_get_theme_option('text_map') ?>',
-				}, {
-					iconLayout: 'default#image',
-					// Путь до нашей картинки
-					iconImageHref: '<?php bloginfo("template_url"); ?>/img/icons/map-marker.svg',
-					// Размеры иконки
-					iconImageSize: [26, 32],
-					// Смещение верхнего угла относительно основания иконки
-					iconImageOffset: [-25, -100]
-				});
-
-				var clusterer = new ymaps.Clusterer({
-					clusterDisableClickZoom: false,
-					clusterOpenBalloonOnClick: false,
-				});
-
-				clusterer.add(myGeoObjects);
-				myMap.geoObjects.add(clusterer);
-				// Отключим zoom
-				myMap.behaviors.disable('scrollZoom');
-
-			}
-		</script>
+		<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A2150bf3f4a6ed3d96eb57d8be5c8ab1958ed1d0217a66f9c874924d36153d2c9&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
 	</section>
 
 	<section id="team" class="team">
@@ -356,7 +322,7 @@
 
 			</div>
 
-			<a href="#" class="team__btn btn">Все сотрудники</a>
+			<a href="<?php echo get_permalink(24);?>" class="team__btn btn">Все сотрудники</a>
 
 		</div>
 	</section>
