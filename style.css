@@ -967,19 +967,19 @@ body.ie ._ibg img {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .swiper-button:before {
   content: "";
   float: left;
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 8px;
-          flex: 0 0 8px;
+  -ms-flex: 0 0 8px;
+  flex: 0 0 8px;
   height: 12px;
   background-size: 100%;
   background-position: 0 0;
@@ -1000,6 +1000,33 @@ body.ie ._ibg img {
 
 .swiper-button-prev:before {
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iOCIgaGVpZ2h0PSIxMiIgdmlld0JveD0iMCAwIDggMTIiPg0KICA8aW1hZ2UgaWQ9ImNoZXZyb24tcmlnaHQiIHdpZHRoPSI4IiBoZWlnaHQ9IjEyIiB4bGluazpocmVmPSJkYXRhOmltYWdlL3BuZztiYXNlNjQsaVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQUFnQUFBQU1DQVlBQUFCZm52eWRBQUFBQkhOQ1NWUUlDQWdJZkFoa2lBQUFBRXRKUkVGVUdGZGovUC8vUHdNUWRBQXhQeEJuQVRGWUFBWVlnUW9zZ0p6alVJRVo2SXBBQ2tCeW1VQThEWnNpbUFLY2lwQVZZRldFcmdCREVja0tNQnhMdENQeGVwT29nTUlaMUFEcjlVRVpZdlZ1b3dBQUFBQkpSVTVFcmtKZ2dnPT0iLz4NCjwvc3ZnPg0K");
+}
+
+.project-wrap {
+  position: relative;
+  flex: 0 1 700px;
+  display: flex;
+  overflow: hidden;
+}
+
+.project-card__next {
+  top: 45%;
+  left: 3%;
+  background-color: #00000050;
+}
+
+.project-card__prev {
+  top: 45%;
+  right: 3%;
+  background-color: #00000050;
+}
+
+.project-card__slide {
+  height: 100%;
+}
+
+.project-card__slider._swiper .swiper-wrapper {
+  height: 100% !important;
 }
 
 ._tabs-item {
@@ -4551,8 +4578,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 .project-card__img {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 700px;
-          flex: 0 1 700px;
+      -ms-flex: 0 1 100%;
+          flex: 0 1 100%;
 }
 
 .project-card__descp {
@@ -5003,7 +5030,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
     display: none;
   }
 
-  .project-card__img {
+  .project-wrap {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 50%;
             flex: 0 1 50%;
@@ -5660,7 +5687,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
         flex-wrap: wrap;
   }
 
-  .project-card__img {
+  .project-wrap {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 100%;
             flex: 0 1 100%;

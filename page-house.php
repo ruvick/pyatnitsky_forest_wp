@@ -24,8 +24,18 @@ get_header(); ?>
 
 			<div class="project-card__row d-flex">
 
-				<div class="project-card__img">
-					<img src="<?php echo get_template_directory_uri();?>/img/project/01.jpg" alt="">
+				<div class="project-wrap">
+					<!-- <div class="nuar_blk"></div> -->
+					<div class="project-card__slider project-card__img _swiper">
+						<div class="project-card__slide slider__slide">
+							<img src="<?php echo get_template_directory_uri();?>/img/project/01.jpg" alt="">
+						</div>
+						<div class="project-card__slide slider__slide">
+							<img src="<?php echo get_template_directory_uri();?>/img/project/01.jpg" alt="">
+						</div>
+					</div>
+					<div class="swiper-button project-card__next swiper-button-next"></div>
+					<div class="swiper-button project-card__prev swiper-button-prev"></div>
 				</div>
 
 				<div class="project-card__descp">
@@ -91,46 +101,46 @@ get_header(); ?>
 		</div>
 	</section>
 
-			<section id="project-descp-sec" class="project-descp-sec recurring">
-				<div class="_container">
+	<section id="project-descp-sec" class="project-descp-sec recurring">
+		<div class="_container">
 
-					<h2>Описание</h2>
+			<h2>Описание</h2>
 
-					<p>
-						Просторный и светлый одноэтажный дом понравится любителям отдыха на природе. Отличный вариант для загородной резиденции! 
-					</p>
+			<p>
+				Просторный и светлый одноэтажный дом понравится любителям отдыха на природе. Отличный вариант для загородной резиденции! 
+			</p>
 
-					<h6>Отличительные особенности:</h6>
-					<ul>
-						<li>Благодаря фахверковой конструкции и жесткому несущему каркасу обладает повышенной надежностью.</li>
-						<li>При строительстве используются материалы, устойчивые к перепаду температур, влаги и разрушительных воздействий окружающей среды.</li>
-						<li>Готовая внутренняя отделка: в доме можно жить сразу после сдачи в эксплуатацию!</li>
-					</ul>
+			<h6>Отличительные особенности:</h6>
+			<ul>
+				<li>Благодаря фахверковой конструкции и жесткому несущему каркасу обладает повышенной надежностью.</li>
+				<li>При строительстве используются материалы, устойчивые к перепаду температур, влаги и разрушительных воздействий окружающей среды.</li>
+				<li>Готовая внутренняя отделка: в доме можно жить сразу после сдачи в эксплуатацию!</li>
+			</ul>
 
-					<div class="project-descp-sec__line"></div>
+			<div class="project-descp-sec__line"></div>
 
-					<h2>Планировки</h2>
+			<h2>Планировки</h2>
 
-					<div class="project-descp-sec__layouts-block d-flex">
+			<div class="project-descp-sec__layouts-block d-flex">
 
-						<div class="project-descp-sec__layouts-img-item">
-							<div class="project-descp-sec__layouts-img">
-								<img src="<?php echo get_template_directory_uri();?>/img/project/02.jpg" alt="">
-							</div>
-							<h4>Усадьба 1</h4>
-						</div>
-
-						<div class="project-descp-sec__layouts-img-item">
-							<div class="project-descp-sec__layouts-img">
-								<img src="<?php echo get_template_directory_uri();?>/img/project/03.jpg" alt="">
-							</div>
-							<h4>Усадьба 2</h4>
-						</div>
-
+				<div class="project-descp-sec__layouts-img-item">
+					<div class="project-descp-sec__layouts-img">
+						<img src="<?php echo get_template_directory_uri();?>/img/project/02.jpg" alt="">
 					</div>
-
+					<h4>Усадьба 1</h4>
 				</div>
-			</section>
+
+				<div class="project-descp-sec__layouts-img-item">
+					<div class="project-descp-sec__layouts-img">
+						<img src="<?php echo get_template_directory_uri();?>/img/project/03.jpg" alt="">
+					</div>
+					<h4>Усадьба 2</h4>
+				</div>
+
+			</div>
+
+		</div>
+	</section>
 
 	<?php get_template_part('template-parts/follow-sec'); ?>
 
