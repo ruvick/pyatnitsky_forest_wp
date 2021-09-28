@@ -25,14 +25,21 @@ get_header(); ?>
 			<div class="project-card__row d-flex">
 
 				<div class="project-wrap">
-					<!-- <div class="nuar_blk"></div> -->
 					<div class="project-card__slider project-card__img _swiper">
-						<div class="project-card__slide slider__slide">
-							<img src="<?php echo get_template_directory_uri();?>/img/project/01.jpg" alt="">
-						</div>
-						<div class="project-card__slide slider__slide">
-							<img src="<?php echo get_template_directory_uri();?>/img/project/01.jpg" alt="">
-						</div>
+						<?
+						$pict = carbon_get_the_post_meta('offer_picture');
+						if ($pict) {
+							$pictIndex = 0;
+							foreach ($pict as $item) {
+								?>
+								<div class="project-card__slide slider__slide">
+									<img src="<?php echo wp_get_attachment_image_src($item['gal_img'], 'large')[0]; ?>" id="<? echo $item['gal_img_sku']; ?>" alt="<? echo $item['gal_img_alt']; ?>">
+								</div>
+								<?
+								$pictIndex++;
+							}
+						}
+						?>
 					</div>
 					<div class="swiper-button project-card__next swiper-button-next"></div>
 					<div class="swiper-button project-card__prev swiper-button-prev"></div>
@@ -40,10 +47,10 @@ get_header(); ?>
 
 				<div class="project-card__descp">
 					<div class="project-card__block-price d-flex">
-						<div class="project-card__block-price-volume">370 м2</div>
+						<div class="project-card__block-price-volume"><?echo carbon_get_post_meta(get_the_ID(),"offer_square"); ?></div>
 						<div class="project-card__block-price-number">
-							<p class="project-card__block-price-number-new">4 556 648 р</p>
-							<p class="project-card__block-price-number-old">Цена без скидки: <span>5 156 555 р</span></p>
+							<p class="project-card__block-price-number-new"><?echo carbon_get_post_meta(get_the_ID(),"offer_price"); ?> р</p>
+							<p class="project-card__block-price-number-old">Цена без скидки: <span><?echo carbon_get_post_meta(get_the_ID(),"offer_old_price"); ?> р</span></p>
 						</div>
 					</div>
 					<div class="project-card__specific">
