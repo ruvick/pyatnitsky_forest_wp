@@ -24,8 +24,8 @@
 			</div>
 
 			<div class="footer__contacts d-flex">
-
-				<a href="tel:<? echo preg_replace('/[^0-9]/', '', $tel); ?>" class="footer__phone"><? echo $tel = carbon_get_theme_option("as_phone_1"); ?></a>
+				<? $tel = carbon_get_theme_option("as_phone_1");
+				if (!empty($tel)) { ?><a href="tel:<? echo preg_replace('/[^0-9]/', '', $tel); ?>" class="footer__phone"><? echo $tel; ?></a><? } ?>
 				<a href="#callback" class="footer__callback _popup-link">Заказать звонок</a>
 				<? $adr = carbon_get_theme_option("as_address");
 				if (!empty($adr)) { ?><p class="footer__address"><? echo $adr; ?></p><? } ?>
