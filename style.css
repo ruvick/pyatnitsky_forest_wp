@@ -4312,10 +4312,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   padding: 33px 0;
 }
 
-.index-map__map {
-  height: 600px;
-}
-
 .team {
   padding: 35px 0;
 }
@@ -4743,6 +4739,20 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 .block__map {
   height: 600px;
 }
+
+/*Убираем лишние элементы с карты*/
+.ymaps-2-1-79-controls-pane,
+.ymaps-2-1-79-controls__control,
+.ymaps-2-1-79-controls__toolbar_right,
+.ymaps-2-1-79-copyright, 
+.ymaps-2-1-79-copyright_logo_no,
+.ymaps-2-1-79-map-copyrights-promo,
+.ymaps-2-1-77-gotoymaps__container,  
+.ymaps-2-1-77-gototech, 
+.ymaps-2-1-77-copyright__content,
+.ymaps-2-1-78-copyright__wrap,
+.ymaps-2-1-78-map-copyrights-promo {
+  display: none !important; }
 
 .about__link-video {
   display: block;

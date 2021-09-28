@@ -244,7 +244,9 @@
 		<div class="_container">
 			<h2 class="title">Как добраться</h2>
 		</div>
+		<div class="index-map__map">
 		<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A2150bf3f4a6ed3d96eb57d8be5c8ab1958ed1d0217a66f9c874924d36153d2c9&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+	</div>
 	</section>
 
 	<section id="team" class="team">
@@ -328,7 +330,7 @@
 		</div>
 	</section>
 
-	<section id="quest-work" class="quest-work">
+<!-- 	<section id="quest-work" class="quest-work">
 		<div class="_container">
 			<div class="quest-work__block-bg _bgi d-flex">
 				<div class="quest-work__img">
@@ -342,7 +344,7 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> -->
 
 	<section id="consult-sec" class="consult-sec">
 		<div class="_container">
