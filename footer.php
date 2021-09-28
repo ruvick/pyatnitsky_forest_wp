@@ -6,8 +6,8 @@
 			<div class="footer__policy">
 				<p>© 2021 Все права защищены</p>
 				<div class="footer__social d-flex">
-					<a href="#" class="footer__social-icon social-icon-01"></a>
-					<a href="#" class="footer__social-icon social-icon-02"></a>
+					<a href="<?php echo carbon_get_theme_option('as_vk'); ?>" class="footer__social-icon social-icon-01"></a>
+					<a href="<?php echo carbon_get_theme_option('as_insta'); ?>" class="footer__social-icon social-icon-02"></a>
 				</div>
 			</div>
 
@@ -24,6 +24,7 @@
 			</div>
 
 			<div class="footer__contacts d-flex">
+
 				<a href="tel:<? echo preg_replace('/[^0-9]/', '', $tel); ?>" class="footer__phone"><? echo $tel = carbon_get_theme_option("as_phone_1"); ?></a>
 				<a href="#callback" class="footer__callback _popup-link">Заказать звонок</a>
 				<? $adr = carbon_get_theme_option("as_address");
