@@ -79,12 +79,15 @@
 		</div>
 	</section>
 
+<? $aboutht = carbon_get_theme_option('about_home_title');
+	if (!empty($aboutht)) { ?>
 	<section id="about-project" class="about-project">
 		<div class="_container">
 			<h2 class="title"><?php echo carbon_get_theme_option('about_home_title'); ?></h2>
 			<?php echo carbon_get_theme_option('about_home'); ?>
 		</div>
 	</section>
+<? } ?>
 
 	<section id="house-types" class="house-types">
 		<div class="_container">
