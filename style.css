@@ -3493,8 +3493,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 .header__callback {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 185px;
-          flex: 0 0 185px;
+      -ms-flex: 0 0 175px;
+          flex: 0 0 175px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -4082,6 +4082,11 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 .about-project p {
   text-align: center;
+}
+
+.about-project__subtitle p{
+  margin: 10px 0;
+  line-height: 1.4;
 }
 
 .house-types {

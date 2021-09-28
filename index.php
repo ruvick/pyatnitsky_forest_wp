@@ -54,7 +54,7 @@
 					</div>
 					<div class="dignity__descp">
 						<h6>Легко добраться</h6>
-						<p>Всего 2,5 км от г. Курск. 16 минут <br> из центра города</p>
+						<p> Догора из центра займет 16 минут. <br/>Поселок расположен в 2,5 км от <br/>г. Курска</p>
 					</div>
 				</a>
 				<div class="dignity__item d-flex">
@@ -76,13 +76,13 @@
 	if (!empty($aboutht)) { ?>
 	<section id="about-project" class="about-project">
 		<div class="_container">
-			<h2 class="title"><?php echo carbon_get_theme_option('about_home_title'); ?></h2>
+			<h2 class="title"><?php echo  carbon_get_theme_option('about_home_title'); ?></h2>
 			<div class="about-project__subtitle">
-			<?php echo carbon_get_theme_option('about_home'); ?>
+			<?php echo apply_filters('the_content', carbon_get_theme_option('about_home')); ?>
 			</div>
 			<a href="<?php echo get_template_directory_uri(); ?>/img/video/pyatnitsky.mp4" data-rel="media" class="about__link-video fancybox position">
 				<video class="about__video" controls="controls" loop autoplay muted poster="<?php echo get_template_directory_uri(); ?>/img/video/video.png">
-					<source src="<?php echo get_template_directory_uri(); ?>/img/video/pyatnitsky.mp4" type='video/ogg; codecs="theora, vorbis"'>
+					<source src="<?php echo get_template_directory_uri(); ?>/img/video/pyatnitsky.mp4" type='video/mp4'>
 				</video>
 			</a>
 		</div>
