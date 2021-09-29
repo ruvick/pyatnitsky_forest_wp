@@ -63,7 +63,7 @@ get_header(); ?>
 										</div>
 									</section>
 
-									<?php get_template_part('template-parts/follow-sec'); ?>
+									<?php get_template_part('template-parts/instagramm'); ?>
 
 								</main>
 

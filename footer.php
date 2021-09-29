@@ -26,9 +26,13 @@
 			<div class="footer__contacts d-flex">
 				<? $tel = carbon_get_theme_option("as_phone_1");
 				if (!empty($tel)) { ?><a href="tel:<? echo preg_replace('/[^0-9]/', '', $tel); ?>" class="footer__phone"><? echo $tel; ?></a><? } ?>
+				<? $tel2 = carbon_get_theme_option("as_phone_2");
+				if (!empty($tel2)) { ?><a href="tel:<? echo preg_replace('/[^0-9]/', '', $tel2); ?>" class="footer__phone"><? echo $tel2; ?></a><? } ?>
 				<a href="#callback" class="footer__callback _popup-link">Заказать звонок</a>
 				<? $adr = carbon_get_theme_option("as_address");
 				if (!empty($adr)) { ?><p class="footer__address"><? echo $adr; ?></p><? } ?>
+				<? $adr1 = carbon_get_theme_option("as_address_1");
+				if (!empty($adr1)) { ?><p class="footer__address"><? echo $adr1; ?></p><? } ?>
 				<? $mail = carbon_get_theme_option("as_email");
 				if (!empty($mail)) { ?><a href="mailto:<? echo $mail; ?>" class="footer__email"><? echo $mail; ?></a><? } ?>
 			</div>

@@ -46,7 +46,7 @@
 						<p>Закрытая охраняемая территория, <br> видеонаблюдение по всей территории поселка</p>
 					</div>
 				</div>
-				<a href="#index-map" class="dignity__item d-flex">
+				<a href="https://yandex.ru/maps/-/CCUqUVuAHD" target="_blank" class="dignity__item d-flex">
 					<div class="dignity__img">
 						<picture>
 							<source srcset="<?php echo get_template_directory_uri(); ?>/img/dignity/02.webp" type="image/webp"><img src="<?php echo get_template_directory_uri(); ?>/img/dignity/02.jpg?_v=1632757662937" alt="">
@@ -95,81 +95,7 @@
 
 			<div class="house-types__row d-flex">
 
-				<a href="<?php echo get_permalink(30);?>" class="house-card__body d-flex">
-					<div class="house-card__img">
-						<picture>
-							<source srcset="<?php echo get_template_directory_uri(); ?>/img/card-houses/01.webp" type="image/webp"><img src="<?php echo get_template_directory_uri(); ?>/img/card-houses/01.jpg?_v=1632757662937" alt="">
-						</picture>
-					</div>
-					<div class="house-card__text">
-						<h3>Квадро</h3>
-						<p class="house-card__descp">Из оцилиндрованого бревна</p>
-					</div>
-					<div class="house-card__price-item d-flex">
-						<p class="house-card__volume btn">400 м2</p>
-						<div class="house-card__block-price">
-							<p class="house-card__price">3 000 000 р</p>
-							<p class="house-card__price-old">3 750 000 р</p>
-						</div>
-					</div>
-				</a>
-
-				<a href="<?php echo get_permalink(30);?>" class="house-card__body d-flex">
-					<div class="house-card__img">
-						<picture>
-							<source srcset="<?php echo get_template_directory_uri(); ?>/img/card-houses/02.webp" type="image/webp"><img src="<?php echo get_template_directory_uri(); ?>/img/card-houses/02.jpg?_v=1632757662937" alt="">
-						</picture>
-					</div>
-					<div class="house-card__text">
-						<h3>Усадьба</h3>
-						<p class="house-card__descp">Дома из клееного бруса</p>
-					</div>
-					<div class="house-card__price-item d-flex">
-						<p class="house-card__volume btn">200 м2</p>
-						<div class="house-card__block-price">
-							<p class="house-card__price">2 500 000 р</p>
-							<p class="house-card__price-old">2 950 000 р</p>
-						</div>
-					</div>
-				</a>
-
-				<a href="<?php echo get_permalink(30);?>" class="house-card__body d-flex">
-					<div class="house-card__img">
-						<picture>
-							<source srcset="<?php echo get_template_directory_uri(); ?>/img/card-houses/03.webp" type="image/webp"><img src="<?php echo get_template_directory_uri(); ?>/img/card-houses/03.jpg?_v=1632757662937" alt="">
-						</picture>
-					</div>
-					<div class="house-card__text">
-						<h3>Коттедж 1</h3>
-						<p class="house-card__descp">Бани</p>
-					</div>
-					<div class="house-card__price-item d-flex">
-						<p class="house-card__volume btn">100 м2</p>
-						<div class="house-card__block-price">
-							<p class="house-card__price">1 100 000 р</p>
-							<p class="house-card__price-old">1 450 000 р</p>
-						</div>
-					</div>
-				</a>
-
-				<a href="<?php echo get_permalink(30);?>" class="house-card__body d-flex">
-					<div class="house-card__img">
-						<picture>
-							<source srcset="<?php echo get_template_directory_uri(); ?>/img/card-houses/04.webp" type="image/webp"><img src="<?php echo get_template_directory_uri(); ?>/img/card-houses/04.jpg?_v=1632757662937" alt="">
-						</picture>
-					</div>
-					<div class="house-card__text">
-						<h3>Коттедж 2</h3>
-						<p class="house-card__descp">Дома из профилированного бруса</p>
-					</div>
-					<div class="house-card__price-item d-flex">
-						<p class="house-card__volume btn">70 м2</p>
-						<div class="house-card__block-price">
-							<p class="house-card__price">900 000 р</p>
-							<p class="house-card__price-old">950 000 р</p>
-						</div>
-					</div>
-				</a>
+					<?php get_template_part('template-parts/main-homes'); ?>
 
 			</div>
 
@@ -211,26 +137,7 @@
 		</div>
 	</section>
 
-	<section id="follow-sec" class="follow-sec">
-		<div class="_container">
-			<a href="<?php echo carbon_get_theme_option('as_insta'); ?>" class="follow-sec__bg d-flex">
-				<div class="follow-sec__img-tel">
-					<picture>
-						<source srcset="<?php echo get_template_directory_uri(); ?>/img/instagram/01.webp" type="image/webp"><img src="<?php echo get_template_directory_uri(); ?>/img/instagram/01.png?_v=1632757662937" alt="">
-					</picture>
-				</div>
-				<div class="follow-sec__title">
-					<h2>Следите за нашим проектом в Instagram</h2>
-					<div class="follow-sec__link"></div>
-				</div>
-				<div class="follow-sec__img-house">
-					<picture>
-						<source srcset="<?php echo get_template_directory_uri(); ?>/img/instagram/02.webp" type="image/webp"><img src="<?php echo get_template_directory_uri(); ?>/img/instagram/02.png?_v=1632757662937" alt="">
-					</picture>
-				</div>
-			</a>
-		</div>
-	</section>
+	<?php get_template_part('template-parts/instagramm'); ?>
 
 	<section id="index-map" class="index-map">
 		<div class="_container">
@@ -245,79 +152,9 @@
 		<div class="_container">
 			<h2 class="title">Наша команда</h2>
 
-			<div class="team__row d-flex">
+			<?php get_template_part('template-parts/main-command'); ?>
 
-				<div class="team-card__body d-flex">
-					<div class="team-card__img">
-						<picture>
-							<source srcset="<?php echo get_template_directory_uri(); ?>/img/team/01.webp" type="image/webp"><img src="<?php echo get_template_directory_uri(); ?>/img/team/01.jpg?_v=1632757662937" alt="">
-						</picture>
-					</div>
-					<div class="team-card__text">
-						<h3>Иванова Дарья Васильевна</h3>
-						<p class="team-card__descp">Директор по развитию</p>
-					</div>
-					<div class="team-card__contact d-flex">
-						<div class="team-card__line"></div>
-						<a href="tel:+7(495)1234567" class="team-card__tel">(495) 123-45-67</a>
-						<a href="mailto:random@mail.com" class="team-card__email">random@mail.com</a>
-					</div>
-				</div>
-
-				<div class="team-card__body d-flex">
-					<div class="team-card__img">
-						<picture>
-							<source srcset="<?php echo get_template_directory_uri(); ?>/img/team/02.webp" type="image/webp"><img src="<?php echo get_template_directory_uri(); ?>/img/team/02.jpg?_v=1632757662937" alt="">
-						</picture>
-					</div>
-					<div class="team-card__text">
-						<h3>Петров Алексей Петрович</h3>
-						<p class="team-card__descp">Исполнительный директор</p>
-					</div>
-					<div class="team-card__contact d-flex">
-						<div class="team-card__line"></div>
-						<a href="tel:+7(495)1234567" class="team-card__tel">(495) 123-45-67</a>
-						<a href="mailto:random@mail.com" class="team-card__email">random@mail.com</a>
-					</div>
-				</div>
-
-				<div class="team-card__body d-flex">
-					<div class="team-card__img">
-						<picture>
-							<source srcset="<?php echo get_template_directory_uri(); ?>/img/team/03.webp" type="image/webp"><img src="<?php echo get_template_directory_uri(); ?>/img/team/03.jpg?_v=1632757662937" alt="">
-						</picture>
-					</div>
-					<div class="team-card__text">
-						<h3>Кисегач Алена Борисовна</h3>
-						<p class="team-card__descp">Заместитель директора</p>
-					</div>
-					<div class="team-card__contact d-flex">
-						<div class="team-card__line"></div>
-						<a href="tel:+7(495)1234567" class="team-card__tel">(495) 123-45-67</a>
-						<a href="mailto:random@mail.com" class="team-card__email">random@mail.com</a>
-					</div>
-				</div>
-
-				<div class="team-card__body d-flex">
-					<div class="team-card__img">
-						<picture>
-							<source srcset="<?php echo get_template_directory_uri(); ?>/img/team/04.webp" type="image/webp"><img src="<?php echo get_template_directory_uri(); ?>/img/team/04.jpg?_v=1632757662937" alt="">
-						</picture>
-					</div>
-					<div class="team-card__text">
-						<h3>Маслов Александр Иванович</h3>
-						<p class="team-card__descp">Архитектор</p>
-					</div>
-					<div class="team-card__contact d-flex">
-						<div class="team-card__line"></div>
-						<a href="tel:+7(495)1234567" class="team-card__tel">(495) 123-45-67</a>
-						<a href="mailto:random@mail.com" class="team-card__email">random@mail.com</a>
-					</div>
-				</div>
-
-			</div>
-
-			<a href="<?php echo get_permalink(24);?>" class="team__btn btn">Все сотрудники</a>
+			<a href="<?php echo get_permalink(24);?>" class="team__btn btn">Вся комманда</a>
 
 		</div>
 	</section>

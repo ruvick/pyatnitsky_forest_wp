@@ -35,20 +35,22 @@ Container::make('theme_options', __('Настройки темы', 'crb'))
           ->set_width(50),
       ))
   ))
-  // ->add_tab('Акции', array(
-  //   Field::make('complex', 'complex_promo', 'Верхние блоки на главной')
-  //     // ->set_max(3) // Можно будет выбрать только 5 постов
-  //     ->add_fields(array(
-  //       Field::make('image', 'img_promo', 'Фото')
-  //         ->set_width(30),
-  //       Field::make('text', 'text_promo', 'Текст')
-  //         ->set_width(30),
-  //       Field::make('text', 'sticker_promo', 'Стикер')
-  //         ->set_width(30),
-  //       Field::make('text', 'link_promo', 'Ссылка')
-  //         ->set_width(30),
-  //     ))
-  // ))
+  ->add_tab('Команда', array(
+    Field::make('complex', 'complex_command', 'Команда')
+      // ->set_max(3) // Можно будет выбрать только 5 постов
+      ->add_fields(array(
+        Field::make('image', 'img_p', 'Фото')
+          ->set_width(30),
+        Field::make('text', 'name', 'Имя')
+          ->set_width(30),
+        Field::make('text', 'dolg', 'Должность')
+          ->set_width(30),
+        Field::make('text', 'phone', 'Телефон')
+          ->set_width(30),
+        Field::make('text', 'mail', 'e-mail')
+          ->set_width(30),
+      ))
+  ))
   ->add_tab('Контакты', array(
     Field::make('text', 'as_company', __('Название'))
       ->set_width(50),
@@ -60,6 +62,8 @@ Container::make('theme_options', __('Настройки темы', 'crb'))
       ->set_width(50),
     Field::make('text', 'as_email', __('Email'))
       ->set_width(50),
+    Field::make('text', 'as_email_2', __('Email дополнительный'))
+      ->set_width(50),
     Field::make('text', 'as_email_send', __('Email для отправки'))
       ->set_width(50),
     Field::make('text', 'as_inn', __('ИНН'))
@@ -69,6 +73,8 @@ Container::make('theme_options', __('Настройки темы', 'crb'))
     Field::make('text', 'as_kpp', __('КПП'))
       ->set_width(50),
     Field::make('text', 'as_address', __('Адрес'))
+      ->set_width(50),
+    Field::make('text', 'as_address_1', __('Адрес агентства'))
       ->set_width(50),
     Field::make('text', 'as_bik', __('БИК'))
       ->set_width(50),
@@ -104,9 +110,27 @@ Container::make('theme_options', __('Настройки темы', 'crb'))
         Field::make('text', 'gal_img_alt', 'alt и title')->set_width(30)
       )),
       Field::make('text', 'offer_square', 'Площадь')->set_width(50),
+      Field::make('file', 'offer_pasport', 'Паспорт объекта')->set_width(100),
+      Field::make('text', 'offer_dop_text', 'Дополнительное описание')->set_width(50),
       Field::make('text', 'offer_price', 'Цена')->set_width(50),
-      Field::make('text', 'offer_old_price', 'Цена без скидки')->set_width(50),
-    Field::make('complex', 'complex_charact', "Харрактеристики обьекта")
+      Field::make('text', 'offer_old_price', 'Цена без скидки')->set_width(100),
+      
+      Field::make('file', 'offer_video_str_1', 'Видео со стройки 1')->set_width(50),
+      Field::make('file', 'offer_video_str_2', 'Видео со стройки 2')->set_width(50),
+      
+      Field::make('image', 'offer_plan_img', 'Планировка (фото)')->set_width(50),
+      Field::make('text', 'offer_plan_h', 'Планировка (подпись)')->set_width(50),
+      
+      Field::make('image', 'offer_plan_img_1', 'Планировка (фото)')->set_width(50),
+      Field::make('text', 'offer_plan_h_1', 'Планировка (подпись)')->set_width(50),
+      
+      Field::make('image', 'offer_plan_img_2', 'Планировка (фото)')->set_width(50),
+      Field::make('text', 'offer_plan_h_2', 'Планировка (подпись)')->set_width(50),
+      
+      Field::make('image', 'offer_plan_img_3', 'Планировка (фото)')->set_width(50),
+      Field::make('text', 'offer_plan_h_3', 'Планировка (подпись)')->set_width(50),
+    
+      Field::make('complex', 'complex_charact', "Харрактеристики обьекта")
       ->add_fields(array(
         Field::make('text', 'charact_name', 'Наименование')->set_width(30),
         Field::make('text', 'charact_desc', 'Значение')->set_width(30),

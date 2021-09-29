@@ -4265,7 +4265,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 .follow-sec {
-  padding: 35px 0;
+  padding: 65px 0 35px 0;
 }
 
 .follow-sec-page {
@@ -4553,11 +4553,11 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 .consult-sec__title-block h2:after {
   content: "";
   float: right;
-  width: 35px;
+  width: 20px;
   height: 66px;
   margin: 0 25px 0 70px;
   background-size: 100%;
-  background-position: 0 0;
+  background-position: center;
   background-repeat: no-repeat;
 }
 
@@ -4718,6 +4718,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+
+  flex-wrap: wrap;
 }
 
 .project-descp-sec__layouts-img-item {
@@ -4740,7 +4742,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   height: 476px;
   border: 1px solid #e7ebee;
   border-radius: 2px;
-  margin-right: 20px;
+  margin-top: 20px;
 }
 
 .project-descp-sec__layouts-img-item:last-child {
@@ -4797,8 +4799,33 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 
+.about__link-video_str {
+  display: inline-block;
+  width: 300px;
+  margin: 35px 20px 0 0px;
+}
+
+.about__link-video_str video{ 
+  width:100%
+}
 
 
+.pasport_lnk {
+  margin-right: 20px;
+  display: inline-block;
+  line-height: 41px;
+}
+
+.pasport_lnk::before {
+  content: "";
+  float: left;
+  margin-right: 10px;
+  width: 40px;
+  height: 40px;
+  background-image: url(img/house-paln.svg);
+  background-size: cover;
+  background-position: center;
+}
 
 
 
@@ -5423,8 +5450,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
   .project-card__block-price-volume {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 90px;
-            flex: 0 0 90px;
+        -ms-flex: 0 0 110px;
+            flex: 0 0 110px;
     height: 40px;
     font-size: 22px;
     margin-right: 15px;
@@ -5445,6 +5472,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
     margin-bottom: 10px;
   }
 
+  .pasport_lnk,
   .project-card__btn {
     margin-top: 15px;
   }
