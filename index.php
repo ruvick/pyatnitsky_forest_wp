@@ -110,26 +110,34 @@
 			<div class="gallery-project__row d-flex">
 				<div class="gallery-project__col gallery-project__col_left">
 					<div class="gallery-project__img-big">
-						<picture>
-							<source srcset="<?php echo get_template_directory_uri(); ?>/img/gallery-project/01.webp" type="image/webp"><img src="<?php echo get_template_directory_uri(); ?>/img/gallery-project/01.jpg?_v=1632757662937" alt="">
-						</picture>
+						<a data-lightbox = "gl1" href="<?php echo get_template_directory_uri(); ?>/img/gallery-project/01.webp" type="image/webp"><img src="<?php echo get_template_directory_uri(); ?>/img/gallery-project/01.jpg" class="href">
+							<picture>
+								<source srcset="<?php echo get_template_directory_uri(); ?>/img/gallery-project/01.webp" type="image/webp"><img src="<?php echo get_template_directory_uri(); ?>/img/gallery-project/01.jpg?_v=1632757662937" alt="">
+							</picture>
+						</a>
 					</div>
 				</div>
 				<div class="gallery-project__col d-flex">
 					<div class="gallery-project__img">
-						<picture>
-							<source srcset="<?php echo get_template_directory_uri(); ?>/img/gallery-project/02.webp" type="image/webp"><img src="<?php echo get_template_directory_uri(); ?>/img/gallery-project/02.jpg?_v=1632757662937" alt="">
-						</picture>
+						<a data-lightbox = "gl1" href="<?php echo get_template_directory_uri(); ?>/img/gallery-project/02.webp" type="image/webp"><img src="<?php echo get_template_directory_uri(); ?>/img/gallery-project/02.jpg" class="href">
+							<picture>
+								<source srcset="<?php echo get_template_directory_uri(); ?>/img/gallery-project/02.webp" type="image/webp"><img src="<?php echo get_template_directory_uri(); ?>/img/gallery-project/02.jpg?_v=1632757662937" alt="">
+							</picture>
+						</a>
 					</div>
 					<div class="gallery-project__img">
-						<picture>
-							<source srcset="<?php echo get_template_directory_uri(); ?>/img/gallery-project/03.webp" type="image/webp"><img src="<?php echo get_template_directory_uri(); ?>/img/gallery-project/03.jpg?_v=1632757662937" alt="">
-						</picture>
+						<a data-lightbox = "gl1" href="<?php echo get_template_directory_uri(); ?>/img/gallery-project/03.webp" type="image/webp"><img src="<?php echo get_template_directory_uri(); ?>/img/gallery-project/03.jpg" class="href">
+							<picture>
+								<source srcset="<?php echo get_template_directory_uri(); ?>/img/gallery-project/03.webp" type="image/webp"><img src="<?php echo get_template_directory_uri(); ?>/img/gallery-project/03.jpg?_v=1632757662937" alt="">
+							</picture>
+						</a>
 					</div>
 					<div class="gallery-project__img">
-						<picture>
-							<source srcset="<?php echo get_template_directory_uri(); ?>/img/gallery-project/04.webp" type="image/webp"><img src="<?php echo get_template_directory_uri(); ?>/img/gallery-project/04.jpg?_v=1632757662937" alt="">
-						</picture>
+						<a data-lightbox = "gl1" href="<?php echo get_template_directory_uri(); ?>/img/gallery-project/04.jpg" class="href">
+							<picture>
+								<source srcset="<?php echo get_template_directory_uri(); ?>/img/gallery-project/04.webp" type="image/webp"><img src="<?php echo get_template_directory_uri(); ?>/img/gallery-project/04.jpg?_v=1632757662937" alt="">
+							</picture>
+						</a>
 					</div>
 				</div>
 			</div>

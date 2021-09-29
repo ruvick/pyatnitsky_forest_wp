@@ -24,8 +24,28 @@ get_header(); ?>
 			<ul>
 				<? $org = carbon_get_theme_option("as_company");
 				if (!empty($org)) { ?><li>Организация: <strong><? echo $org; ?></strong></li><? } ?>
+				
 				<? $adr = carbon_get_theme_option("as_address");
-				if (!empty($adr)) { ?><li>Адрес: <strong><? echo $adr; ?></strong></li><? } ?>
+				if (!empty($adr)) { ?><li>Адрес застройщика: <strong><? echo $adr; ?></strong></li><? } ?>
+				
+				<? $tel = carbon_get_theme_option("as_phone_1");
+				if (!empty($tel)) { ?><li>Телефон застройщика: <strong><a href="tel:<? echo preg_replace('/[^0-9]/', '', $tel); ?>"><? echo $tel; ?></strong></a> <? } ?>
+				
+				<? $mail = carbon_get_theme_option("as_email_2");
+				if (!empty($mail)) { ?><li>Email: <strong><a href="mailto:<? echo $mail; ?>"><? echo $mail; ?></strong></a></li><? } ?>
+
+				<br/>
+				<br/>
+
+				<? $adr = carbon_get_theme_option("as_address_1");
+				if (!empty($adr)) { ?><li>Адрес отдела продаж: <strong><? echo $adr; ?></strong></li><? } ?>
+				
+				<? $tel = carbon_get_theme_option("as_phone_2");
+				if (!empty($tel)) { ?><li>Телефон отдела продаж: <strong><a href="tel:<? echo preg_replace('/[^0-9]/', '', $tel); ?>"><? echo $tel; ?></strong></a> <? } ?>
+
+				<? $mail = carbon_get_theme_option("as_email");
+				if (!empty($mail)) { ?><li>Email: <strong><a href="mailto:<? echo $mail; ?>"><? echo $mail; ?></strong></a></li><? } ?>
+
 				<? $inn = carbon_get_theme_option("as_inn");
 				if (!empty($inn)) { ?><li>ИНН: <strong><? echo $inn; ?></strong></li><? } ?>
 				<? $kpp = carbon_get_theme_option("as_kpp");
@@ -40,8 +60,7 @@ get_header(); ?>
 				if (!empty($bik)) { ?><li>БИК: <strong><? echo $bik; ?></strong></li><? } ?>
 				<? $bank = carbon_get_theme_option("as_bank");
 				if (!empty($bank)) { ?><li>БАНК: <strong><? echo $bank; ?></strong></li><? } ?>
-				<? $mail = carbon_get_theme_option("as_email");
-				if (!empty($mail)) { ?><li>Email: <strong><a href="mailto:<? echo $mail; ?>"><? echo $mail; ?></strong></a></li><? } ?>
+				
 				<? $tel = carbon_get_theme_option("as_phone_1");
 				$tel2 = carbon_get_theme_option("as_phone_2");
 				if (!empty($tel)) { ?><li>Тел: <strong><a href="tel:<? echo preg_replace('/[^0-9]/', '', $tel); ?>"><? echo $tel; ?></strong></a> <a href="tel:<? echo preg_replace('/[^0-9]/', '', $tel2); ?>"><? echo $tel2; ?></strong></a></li><? } ?>
@@ -60,7 +79,7 @@ get_header(); ?>
 					// Координаты центра карты
 					center: [<?php echo carbon_get_theme_option('map_point') ?>],
 					// Масштаб карты
-					zoom: 17,
+					zoom: 13,
 					// Выключаем все управление картой
 					controls: []
 				});
@@ -81,12 +100,26 @@ get_header(); ?>
 					iconImageOffset: [-25, -100]
 				});
 
+				myGeoObjects2 = new ymaps.Placemark([<?php echo carbon_get_theme_option('map_point_2') ?>], {
+					// hintContent: '<div class="map-hint">Авто профи, Курск, ул.Комарова, 16</div>',
+					balloonContent: '<div class="map-hint">Отдел продаж ("Курская недвижимость")',
+				}, {
+					iconLayout: 'default#image',
+					// Путь до нашей картинки
+					iconImageHref: '<?php bloginfo("template_url"); ?>/img/icons/map-marker.svg',
+					// Размеры иконки
+					iconImageSize: [26, 32],
+					// Смещение верхнего угла относительно основания иконки
+					iconImageOffset: [-25, -100]
+				});
+
 				var clusterer = new ymaps.Clusterer({
 					clusterDisableClickZoom: false,
 					clusterOpenBalloonOnClick: false,
 				});
 
 				clusterer.add(myGeoObjects);
+				clusterer.add(myGeoObjects2);
 				myMap.geoObjects.add(clusterer);
 				// Отключим zoom
 				myMap.behaviors.disable('scrollZoom');

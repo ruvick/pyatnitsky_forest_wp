@@ -2,7 +2,7 @@
 
     $arg = [
         'sort_order'   => 'ASC',
-        'sort_column'  => 'post_date',
+        'sort_column'  => 'menu_order',
         'child_of' => 27,
         
     ];

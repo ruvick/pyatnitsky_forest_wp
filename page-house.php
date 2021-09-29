@@ -74,6 +74,13 @@ get_header(); ?>
 					</div>
 					<a href="<?php echo wp_get_attachment_url(carbon_get_the_post_meta("offer_pasport")); ?>" class="pasport_lnk">Скачать паспорт объекта</a>
 					<a href="#" class="project-card__btn btn">Заказать расчет стоимости</a>
+					<? 
+						$vr = carbon_get_the_post_meta("offer_vr");
+						
+						if (!empty($vr)) {
+					?>
+						<a target = "_blank" href="<?echo $vr?>" class="pasport_lnk vr_lnk">VR тур</a>
+					<? } ?>
 				</div>
 
 			</div>
@@ -120,7 +127,7 @@ get_header(); ?>
 
 				<div class="project-descp-sec__layouts-img-item">
 					<div class="project-descp-sec__layouts-img">
-						<a fancybox href="<?php echo wp_get_attachment_image_src(carbon_get_the_post_meta("offer_plan_img"), 'large')[0]; ?>" class="href">
+						<a data-lightbox = "gl1" href="<?php echo wp_get_attachment_image_src(carbon_get_the_post_meta("offer_plan_img"), 'large')[0]; ?>" class="href">
 							<img loading="lazy"  src="<?php echo wp_get_attachment_image_src(carbon_get_the_post_meta("offer_plan_img"), 'large')[0]; ?>" alt="">
 						</a>
 					</div>
@@ -129,7 +136,9 @@ get_header(); ?>
 
 				<div class="project-descp-sec__layouts-img-item">
 					<div class="project-descp-sec__layouts-img">
-						<img loading="lazy" fancybox src="<?php echo wp_get_attachment_image_src(carbon_get_the_post_meta("offer_plan_img_1"), 'large')[0]; ?>" alt="">
+						<a data-lightbox = "gl1" href="<?php echo wp_get_attachment_image_src(carbon_get_the_post_meta("offer_plan_img_1"), 'large')[0]; ?>" class="href">
+							<img loading="lazy" fancybox src="<?php echo wp_get_attachment_image_src(carbon_get_the_post_meta("offer_plan_img_1"), 'large')[0]; ?>" alt="">
+						</a>
 					</div>
 					<h4><? echo carbon_get_the_post_meta("offer_plan_h_1"); ?></h4>
 				</div>
@@ -137,8 +146,11 @@ get_header(); ?>
 				<? if (carbon_get_the_post_meta("offer_plan_img_2")) { ?>
 					<div class="project-descp-sec__layouts-img-item">
 						<div class="project-descp-sec__layouts-img">
-							<img loading="lazy" fancybox src="<?php echo wp_get_attachment_image_src(carbon_get_the_post_meta("offer_plan_img_2"), 'large')[0]; ?>" alt="">
+							<a data-lightbox = "gl1" href="<?php echo wp_get_attachment_image_src(carbon_get_the_post_meta("offer_plan_img_2"), 'large')[0]; ?>" class="href">
+								<img loading="lazy" fancybox src="<?php echo wp_get_attachment_image_src(carbon_get_the_post_meta("offer_plan_img_2"), 'large')[0]; ?>" alt="">
+							</a>
 						</div>
+
 						<h4><? echo carbon_get_the_post_meta("offer_plan_h_2"); ?></h4>
 					</div>
 				<?}?>
@@ -146,7 +158,9 @@ get_header(); ?>
 				<? if (carbon_get_the_post_meta("offer_plan_img_3")) { ?>
 				<div class="project-descp-sec__layouts-img-item">
 					<div class="project-descp-sec__layouts-img">
-						<img loading="lazy" fancybox src="<?php echo wp_get_attachment_image_src(carbon_get_the_post_meta("offer_plan_img_3"), 'large')[0]; ?>" alt="">
+						<a data-lightbox = "gl1" href="<?php echo wp_get_attachment_image_src(carbon_get_the_post_meta("offer_plan_img_3"), 'large')[0]; ?>" class="href">	
+							<img loading="lazy" fancybox src="<?php echo wp_get_attachment_image_src(carbon_get_the_post_meta("offer_plan_img_3"), 'large')[0]; ?>" alt="">
+						</a>
 					</div>
 					<h4><? echo carbon_get_the_post_meta("offer_plan_h_3"); ?></h4>
 				</div>

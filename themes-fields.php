@@ -96,6 +96,8 @@ Container::make('theme_options', __('Настройки темы', 'crb'))
       ->set_width(50),
     Field::make('text', 'map_point', 'Координаты карты')
       ->set_width(50),
+    Field::make('text', 'map_point_2', 'Координаты карты (Агентство)')
+      ->set_width(50),
     Field::make('text', 'text_map', 'Текст метки карты')
       ->set_width(50),
   ));
@@ -117,6 +119,7 @@ Container::make('theme_options', __('Настройки темы', 'crb'))
       
       Field::make('file', 'offer_video_str_1', 'Видео со стройки 1')->set_width(50),
       Field::make('file', 'offer_video_str_2', 'Видео со стройки 2')->set_width(50),
+      Field::make('text', 'offer_vr', 'VR тур')->set_width(100),
       
       Field::make('image', 'offer_plan_img', 'Планировка (фото)')->set_width(50),
       Field::make('text', 'offer_plan_h', 'Планировка (подпись)')->set_width(50),
@@ -135,6 +138,15 @@ Container::make('theme_options', __('Настройки темы', 'crb'))
         Field::make('text', 'charact_name', 'Наименование')->set_width(30),
         Field::make('text', 'charact_desc', 'Значение')->set_width(30),
       )),
+    ));
+    
+    Container::make('post_meta', 'house_gp', 'Генплан')
+    ->show_on_template(array('page-genplan.php'))
+      ->add_fields(array(   
+    
+      Field::make('file', 'offer_gp_file', 'Генплан PDF')->set_width(100),
+      Field::make('image', 'offer_gp_img', 'Генплан (фото)')->set_width(50),
+      
     ));
 
 // Container::make('post_meta', 'ultra_product_cr', 'Характеристики товара')
