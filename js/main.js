@@ -19,6 +19,7 @@ if (unisend_btn !== undefined)
 			xhr.onload = function(e) {
 				unisend_form.getElementsByClassName("form__line")[0].style.display="none";
 				unisend_form.getElementsByClassName("popup__policy")[0].style.display="none";
+				unisend_form.getElementsByClassName("popup__form-btn")[0].style.display="none";
 				unisend_form.getElementsByClassName("form_msg")[0].style.display="block";
 			}
 
