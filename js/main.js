@@ -1,3 +1,43 @@
+document.addEventListener("DOMContentLoaded", () => {
+let unisend_form = document.getElementsByClassName("universal_send_form")[0]; 
+let unisend_btn = unisend_form.getElementsByClassName("u_send")[0];
+if (unisend_btn !== undefined) 
+	unisend_btn.onclick = (e) => {
+		let error = form_validate(unisend_form);
+ 		if (error == 0) {
+			e.stopPropagation()
+			console.log(unisend_form.getElementsByClassName("form_msg")[0])
+
+			var xhr = new XMLHttpRequest()
+
+			var params = new URLSearchParams()
+			params.append('action', 'sendphone')
+			params.append('nonce', allAjax.nonce)
+			params.append('name', unisend_form.getElementsByTagName("name")[0])
+			params.append('tel', unisend_form.getElementsByTagName("tel")[0])
+
+			xhr.onload = function(e) {
+				unisend_form.getElementsByClassName("form__line")[0].style.display="none";
+				unisend_form.getElementsByClassName("popup__policy")[0].style.display="none";
+				unisend_form.getElementsByClassName("form_msg")[0].style.display="block";
+			}
+
+			xhr.onerror = function () { 
+				error(xhr, xhr.status); 
+			};
+
+			xhr.open('POST', allAjax.ajaxurl, true);
+			xhr.send(params);
+	 } else {
+				let form_error = unisend_form.querySelectorAll('._error');
+				if (form_error && unisend_form.classList.contains('_goto-error')) {
+					_goto(form_error[0], 1000, 50);
+				}
+				e.preventDefault();
+			}
+	} 
+});
+
 function email_test(input) {
 	return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
 }
@@ -670,60 +710,63 @@ smotScrollElems.forEach(link => {
 
 
 //let btn = document.querySelectorAll('button[type="submit"],input[type="submit"]');
-let forms = document.querySelectorAll('form');
-if (forms.length > 0) {
-	for (let index = 0; index < forms.length; index++) {
-		const el = forms[index];
-		el.addEventListener('submit', form_submit);
-	}
-}
-async function form_submit(e) {
-	let btn = e.target;
-	let form = btn.closest('form');
-	let error = form_validate(form);
-	if (error == 0) {
-		let formAction = form.getAttribute('action') ? form.getAttribute('action').trim() : '#';
-		let formMethod = form.getAttribute('method') ? form.getAttribute('method').trim() : 'GET';
-		const message = form.getAttribute('data-message');
-		const ajax = form.getAttribute('data-ajax');
 
-		//SendForm
-		if (ajax) {
-			e.preventDefault();
-			let formData = new FormData(form);
-			form.classList.add('_sending');
-			let response = await fetch(formAction, {
-				method: formMethod,
-				body: formData
-			});
-			if (response.ok) {
-				let result = await response.json();
-				form.classList.remove('_sending');
-				if (message) {
-					popup_open(message + '-message');
-				}
-				form_clean(form);
-			} else {
-				alert("Ошибка");
-				form.classList.remove('_sending');
-			}
-		}
-		// If test
-		if (form.hasAttribute('data-test')) {
-			e.preventDefault();
-			if (message) {
-				popup_open(message + '-message');
-			}
-			form_clean(form);
-		}
-	} else {
-		let form_error = form.querySelectorAll('._error');
-		if (form_error && form.classList.contains('_goto-error')) {
-			_goto(form_error[0], 1000, 50);
-		}
-		e.preventDefault();
-	}
-}
+// let forms = document.querySelectorAll('form');
+// if (forms.length > 0) {
+// 	for (let index = 0; index < forms.length; index++) {
+// 		const el = forms[index];
+// 		el.addEventListener('submit', form_submit);
+// 	}
+// }
+// async function form_submit(e) {
+// 	let btn = e.target;
+// 	let form = btn.closest('form');
+// 	let error = form_validate(form);
+// 	if (error == 0) {
+// 		let formAction = form.getAttribute('action') ? form.getAttribute('action').trim() : '#';
+// 		let formMethod = form.getAttribute('method') ? form.getAttribute('method').trim() : 'GET';
+// 		const message = form.getAttribute('data-message');
+// 		const ajax = form.getAttribute('data-ajax');
+
+// 		// //SendForm
+// 		// if (ajax) {
+// 		// 	e.preventDefault();
+// 		// 	let formData = new FormData(form);
+// 		// 	form.classList.add('_sending');
+// 		// 	let response = await fetch(formAction, {
+// 		// 		method: formMethod,
+// 		// 		body: formData
+// 		// 	});
+// 		// 	if (response.ok) {
+// 		// 		let result = await response.json();
+// 		// 		form.classList.remove('_sending');
+// 		// 		if (message) {
+// 		// 			popup_open(message + '-message');
+// 		// 		}
+// 		// 		form_clean(form);
+// 		// 	} else {
+// 		// 		alert("Ошибка");
+// 		// 		form.classList.remove('_sending');
+// 		// 	}
+// 		// }
+// 		// // If test
+// 		// if (form.hasAttribute('data-test')) {
+// 		// 	e.preventDefault();
+// 		// 	if (message) {
+// 		// 		popup_open(message + '-message');
+// 		// 	}
+// 		// 	form_clean(form);
+// 		// }
+
+// 	} else {
+// 		let form_error = form.querySelectorAll('._error');
+// 		if (form_error && form.classList.contains('_goto-error')) {
+// 			_goto(form_error[0], 1000, 50);
+// 		}
+// 		e.preventDefault();
+// 	}
+// }
+
 function form_validate(form) {
 	let error = 0;
 	let form_req = form.querySelectorAll('._req');

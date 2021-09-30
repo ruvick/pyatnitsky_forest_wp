@@ -4872,6 +4872,81 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   background-color: #ce9316;
 }
 
+.index-map__map {
+  width:100%;
+  display: flex;
+}
+
+.index-map__map .mapIn{ 
+  flex: 3;
+  overflow: hidden;
+}
+
+.index-map__map .dbrVIdeo .about__link-video{ 
+  width:91%;
+  margin: auto;
+
+}
+.index-map__map .dbrVIdeo{ 
+  flex: 2;
+  overflow: hidden;
+  background-color:#f0f3ed;
+  display: flex;
+}
+
+.prod_banners {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.prod_element {
+  min-height: 300px;
+  color:white;
+  flex:1;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+}
+
+.prod_element .nuar_blk {
+  background-color: #00000065;
+}
+
+.prod_element .text {
+  z-index: 10;
+  position: absolute;
+  top:30%;
+  left:20px
+}
+
+.prod_element h2{ 
+  color:white
+}
+
+.prod_element_ipoteka {
+  background-image: url(img/ipoteka.jpg);
+  margin-right: 5px;
+}
+
+.prod_element_treidin{
+  background-image: url(img/treidin.jpg);
+  margin-left: 5px;
+}
+
+@media (max-width: 1440px) { 
+  .index-map__map .dbrVIdeo{ 
+    flex:2;
+  }
+
+  .index-map__map .mapIn{  
+    flex:2;
+  }
+
+}
+
 @media (min-width: 991.98px) {
   .quantity__button:hover::before,
   .quantity__button:hover::after {
@@ -4880,6 +4955,9 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 @media (min-width: 992px) {
+  
+
+
   .select__option:hover {
     background: #d9d9d9;
   }
@@ -4958,6 +5036,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 @media (max-width: 1100px) {
+
+
   .logo-icon:before {
     margin-right: 15px;
   }
@@ -5116,6 +5196,15 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 @media (max-width: 860px) {
+
+  .prod_banners { 
+    flex-direction: column;
+  }
+  
+  .prod_element { 
+    margin: 5px 0;
+  }
+
   .logo-icon {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 70px;
@@ -5582,6 +5671,14 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 @media (max-width: 612px) {
+
+  .index-map__map {
+    flex-direction: column;
+  }
+
+  .index-map__map .dbrVIdeo .about__link-video{ 
+    width:100%;
+  }
   .popup__img {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 43%;

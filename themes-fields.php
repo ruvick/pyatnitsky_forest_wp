@@ -52,6 +52,8 @@ Container::make('theme_options', __('Настройки темы', 'crb'))
       ))
   ))
   ->add_tab('Контакты', array(
+    Field::make('file', 'as_dbr_video', __('Видео в раздел как добраться'))
+      ->set_width(100),
     Field::make('text', 'as_company', __('Название'))
       ->set_width(50),
     Field::make('text', 'as_schedule', __('Режим работы'))

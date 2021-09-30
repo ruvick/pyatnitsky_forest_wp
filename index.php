@@ -152,8 +152,18 @@
 			<h2 class="title">Как добраться</h2>
 		</div>
 		<div class="index-map__map">
-		<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A2150bf3f4a6ed3d96eb57d8be5c8ab1958ed1d0217a66f9c874924d36153d2c9&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
-	</div>
+			<div class="mapIn">
+			<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A2150bf3f4a6ed3d96eb57d8be5c8ab1958ed1d0217a66f9c874924d36153d2c9&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+			</div>	
+			
+			<div class = "dbrVIdeo">
+				<a href="<?php echo wp_get_attachment_url(carbon_get_theme_option("as_dbr_video")); ?>" data-rel="media" class="about__link-video">
+					<video class="about__video" controls="controls" loop autoplay muted poster="<?php echo get_template_directory_uri(); ?>/img/video/video.png">
+						<source src="<?php echo wp_get_attachment_url(carbon_get_theme_option("as_dbr_video")); ?>" type='video/mp4'>
+					</video>
+				</a>
+			</div>
+		</div>
 	</section>
 
 	<section id="team" class="team">

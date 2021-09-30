@@ -13,19 +13,22 @@
 				</div>
 				<div class="popup__form-block">
 					<h2>Заказать звонок</h2>
-					<div class="SendetMsg" style="display:none;">
-						Ваше сообщение успешно отправлено.
-					</div>
+					
 					<div class="headen_form_blk">
 						<p class="popup__notific">Оставьте заявку и мы свяжемся с Вами в течении 15 минут</p>
-						<form action="#" class="form">
+						<form action="#" class="form universal_send_form">
+							
+							<div class="SendetMsg form_msg" style="display:none;">
+								Ваше сообщение успешно отправлено.
+							</div>
+
 							<div class="form__line">
-								<input id="name" autocomplete="off" type="text" name="form[]" data-error="Ошибка" data-value="Имя" class="popup__form-input input _req">
-								<input id="tel2" autocomplete="off" type="text" name="form[]" data-error="Ошибка" data-value="Телефон" class="popup__form-input input _phone _req">
+								<input id="name" autocomplete="off" type="text" name="name" data-error="Ошибка" data-value="Имя" class="popup__form-input input _req">
+								<input id="tel2" autocomplete="off" type="text" name="tel" data-error="Ошибка" data-value="Телефон" class="popup__form-input input _phone _req">
 							</div>
 							<p class="popup__policy">Заполняя данную форму вы соглашаетесь с <a href="#">политикой
 									конфиденциальности</a></p>
-							<button class="popup__form-btn form__btn btn">Заказать</button>
+							<button type = "button" class="popup__form-btn form__btn btn u_send">Заказать</button>
 						</form>
 					</div>
 				</div>
