@@ -11,7 +11,7 @@
 							</picture>
 						</div>
 						<div class="team-card__text">
-							<h3><? echo $item["text"]; ?></h3>
+							<h3><? echo $item["name"]; ?></h3>
 							<p class="team-card__descp"><? echo $item["dolg"]; ?></p>
 						</div>
 						<div class="team-card__contact d-flex">
