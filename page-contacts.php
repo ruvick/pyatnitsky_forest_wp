@@ -15,7 +15,7 @@ get_header(); ?>
 
 			<?php
 			if (function_exists('yoast_breadcrumb')) {
-				yoast_breadcrumb('<p id="breadcrumbs">', '</p>');
+				yoast_breadcrumb('<p id="breadcrumbs">', '</p>'); 
 			}
 			?>
 
@@ -35,6 +35,14 @@ get_header(); ?>
 				if (!empty($mail)) { ?><li>Email: <strong><a href="mailto:<? echo $mail; ?>"><? echo $mail; ?></strong></a></li><? } ?>
 
 				<br/>
+
+				<? $adr = carbon_get_theme_option("as_address_2");
+				if (!empty($adr)) { ?><li>Юридический адрес: <strong><? echo $adr; ?></strong></li><? } ?>
+				<? $inn = carbon_get_theme_option("as_inn");
+				if (!empty($inn)) { ?><li>ИНН: <strong><? echo $inn; ?></strong></li><? } ?>
+				<? $ogrn = carbon_get_theme_option("as_orgn");
+				if (!empty($ogrn)) { ?><li>ОРГН: <strong><? echo $ogrn; ?></strong></li><? } ?>
+
 				<br/>
 
 				<? $adr = carbon_get_theme_option("as_address_1");
@@ -46,12 +54,8 @@ get_header(); ?>
 				<? $mail = carbon_get_theme_option("as_email");
 				if (!empty($mail)) { ?><li>Email: <strong><a href="mailto:<? echo $mail; ?>"><? echo $mail; ?></strong></a></li><? } ?>
 
-				<? $inn = carbon_get_theme_option("as_inn");
-				if (!empty($inn)) { ?><li>ИНН: <strong><? echo $inn; ?></strong></li><? } ?>
 				<? $kpp = carbon_get_theme_option("as_kpp");
 				if (!empty($kpp)) { ?><li>КПП: <strong><? echo $kpp; ?></strong></li><? } ?>
-				<? $ogrn = carbon_get_theme_option("as_orgn");
-				if (!empty($ogrn)) { ?><li>ОРГН: <strong><? echo $ogrn; ?></strong></li><? } ?>
 				<? $rs = carbon_get_theme_option("as_rs");
 				if (!empty($rs)) { ?><li>Р/С: <strong><? echo $rs; ?></strong></li><? } ?>
 				<? $ks = carbon_get_theme_option("as_ks");

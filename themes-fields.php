@@ -78,6 +78,8 @@ Container::make('theme_options', __('Настройки темы', 'crb'))
       ->set_width(50),
     Field::make('text', 'as_address_1', __('Адрес агентства'))
       ->set_width(50),
+    Field::make('text', 'as_address_2', __('Юридический адрес'))
+      ->set_width(50),
     Field::make('text', 'as_bik', __('БИК'))
       ->set_width(50),
     Field::make('text', 'as_rs', __('Р/С'))
