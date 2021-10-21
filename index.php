@@ -85,6 +85,8 @@
 					<source src="<?php echo get_template_directory_uri(); ?>/img/video/pyatnitsky.mp4" type='video/mp4'>
 				</video>
 			</a>
+
+			<a href="https://forestsea.ru/wp-content/uploads/2021/10/prezentation-les-more.pdf" class="gallery-project__btn btn">Скачать презентацию</a>
 		</div>
 	</section>
 <? } ?>

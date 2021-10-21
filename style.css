@@ -4078,6 +4078,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 .about-project {
   padding: 65px 0;
+  text-align: center;
 }
 
 .about-project p {
