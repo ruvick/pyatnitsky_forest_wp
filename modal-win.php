@@ -4,7 +4,7 @@
 <div class="popup popup_callback">
 	<div class="popup__content">
 		<div class="popup__body">
-			<div class="popup__close"></div>
+			<div class="popup__close" aria-label="Закрыть модальное окно"></div>
 			<div class="popup__item d-flex">
 				<div class="popup__img">
 					<picture>
@@ -23,8 +23,8 @@
 							</div>
 
 							<div class="form__line">
-								<input id="name" autocomplete="off" type="text" name="name" data-error="Ошибка" data-value="Имя" class="popup__form-input input _req">
-								<input id="tel2" autocomplete="off" type="text" name="tel" data-error="Ошибка" data-value="Телефон" class="popup__form-input input _phone _req">
+								<input id="name" autocomplete="off" type="text" name="name" data-error="Заполните поля" data-value="Имя*" class="popup__form-input input _req">
+								<input id="tel2" autocomplete="off" type="text" name="tel" data-error="Заполните поля" data-value="Телефон*" class="popup__form-input input _phone _req">
 							</div>
 							<p class="popup__policy">Заполняя данную форму вы соглашаетесь с <a href="#">политикой
 									конфиденциальности</a></p>
@@ -53,7 +53,7 @@
 
 <div style="display: none;">
 	<div class="box-modal box-modal-new box-modal-new__cust" id="question">
-		<div class="box-modal_close box-modal_close_new arcticmodal-close">X</div>
+		<div class="box-modal_close box-modal_close_new arcticmodal-close" aria-label="Закрыть модальное окно">X</div>
 		<img src="<?php bloginfo("template_url") ?>/img/similar-01.jpg" loading="lazy" />
 		<div class="formArctikBlk mod-zagr-tur">
 			<h2>Заказать звонок <span class='tkName'></span></h2>
