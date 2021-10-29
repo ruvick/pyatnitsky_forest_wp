@@ -17,10 +17,11 @@ if (unisend_btn !== undefined)
 			params.append('tel', unisend_form.getElementsByTagName("tel")[0])
 
 			xhr.onload = function(e) {
-				unisend_form.getElementsByClassName("form__line")[0].style.display="none";
-				unisend_form.getElementsByClassName("popup__policy")[0].style.display="none";
-				unisend_form.getElementsByClassName("popup__form-btn")[0].style.display="none";
-				unisend_form.getElementsByClassName("form_msg")[0].style.display="block";
+				// unisend_form.getElementsByClassName("form__line")[0].style.display="none";
+				// unisend_form.getElementsByClassName("popup__policy")[0].style.display="none";
+				// unisend_form.getElementsByClassName("popup__form-btn")[0].style.display="none";
+				// unisend_form.getElementsByClassName("form_msg")[0].style.display="block"; 
+				window.location.href = "https://forestsea.ru/stranica-blagodarnosti/";
 			}
 
 			xhr.onerror = function () { 
