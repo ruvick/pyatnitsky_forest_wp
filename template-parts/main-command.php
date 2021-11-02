@@ -17,7 +17,7 @@
 						<div class="team-card__contact d-flex">
 							<div class="team-card__line"></div>
 							<a href="tel:+7(495)1234567" class="team-card__tel"><? echo $item["phone"]; ?></a>
-							<a href="mailto:random@mail.com" class="team-card__email"><? echo $item["mail"]; ?></a>
+							<a href="mailto:<? echo $item["mail"]; ?>" class="team-card__email"><? echo $item["mail"]; ?></a>
 						</div>
 					</div>
 				<?
