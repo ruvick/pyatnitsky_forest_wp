@@ -6,9 +6,11 @@
 			<div class="footer__policy">
 				<p>© 2021 Все права защищены</p>
 				<div class="footer__social d-flex">
-					<a href="<?php echo carbon_get_theme_option('as_vk'); ?>" class="footer__social-icon social-icon-01"></a>
-					<a href="<?php echo carbon_get_theme_option('as_insta'); ?>" class="footer__social-icon social-icon-02"></a>
-				</div>
+					<? $vk = carbon_get_theme_option("as_vk");
+					if (!empty($vk)) { ?><a href="<? echo $vk; ?>" class="footer__social-icon social-icon-01"></a><? } ?>
+					<? $insta = carbon_get_theme_option("as_insta");
+					if (!empty($insta)) { ?><a href="<? echo $insta; ?>" class="footer__social-icon social-icon-02"></a><? } ?>
+				</div> 
 			</div>
 
 			<div class="footer__menu-block d-flex">
