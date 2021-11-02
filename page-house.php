@@ -73,7 +73,7 @@ get_header(); ?>
 						</div>
 					</div>
 					<a href="<?php echo wp_get_attachment_url(carbon_get_the_post_meta("offer_pasport")); ?>" class="pasport_lnk">Скачать паспорт объекта</a>
-					<a href="#" class="project-card__btn btn">Заказать расчет стоимости</a>
+					<a href="#callback" class="project-card__btn btn _popup-link">Заказать расчет стоимости</a>
 					<? 
 						$vr = carbon_get_the_post_meta("offer_vr");
 						
