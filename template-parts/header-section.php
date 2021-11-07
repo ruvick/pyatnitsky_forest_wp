@@ -17,8 +17,9 @@
 			</div>
 
 			<div class="header__callback d-flex">
-				<a href="tel:<? echo preg_replace('/[^0-9]/', '', $tel); ?>"><? echo $tel = carbon_get_theme_option("as_phone_1"); ?></a>
-				<a href="#callback" class="header__popup-link _popup-link">ЗАКАЗАТЬ ЗВОНОК</a>
+				<? $tel = carbon_get_theme_option("as_phone_1"); 
+				if (!empty($tel)){?><a href="tel:<? echo preg_replace('/[^0-9]/', '', $tel); ?>" class="header__phone"><? echo $tel; ?></a>
+				<a href="#callback" class="header__popup-link _popup-link">ЗАКАЗАТЬ ЗВОНОК</a><?}?>
 			</div>
 			<a href="tel:84951700000" class="mob-callback__phone" aria-label="Иконка мобильного телефона"></a>
 			<a href="tel:<? echo preg_replace('/[^0-9]/', '', $tel); ?>" class="mob-callback__phone"></a>
