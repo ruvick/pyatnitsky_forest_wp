@@ -176,7 +176,7 @@
 
 												<?php get_template_part('template-parts/main-command'); ?>
 
-												<a href="<?php echo get_permalink(24);?>" class="team__btn btn">Вся комманда</a>
+												<a href="<?php echo get_permalink(24);?>" class="team__btn btn">Вся команда</a>
 
 											</div>
 										</section>
