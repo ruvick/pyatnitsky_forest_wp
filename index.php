@@ -74,6 +74,27 @@
 					</div>
 				</section>
 
+				<section id = "sertifikat_section" class = "sertifikat_section">
+					<div class="_container sert_blk">
+						<div class="foto">
+						<a data-lightbox="gl11" href="<?php echo get_template_directory_uri(); ?>/img/sert.jpg">
+						<img src="<?php echo get_template_directory_uri(); ?>/img/sert.jpg" alt="Сертификат - победитель конкурса Регионы - устойчивое развитие">
+						</a>	
+						
+						</div>
+						<div class="text">
+							<h2>Победитель конкурса "Регионы - устойчивое развитие"</h2>
+							<p>
+								Наш инвестиционный проект "Жилищный поселок усадебного типа Лес&Море" стал победителем ежегодного конкурса "Регионы - устойчивое развитие"
+							</p>
+							<p>
+								Победа в конкурсе гарантирует устойчивое финансирование нашего проекта. Наши покупатели могут быть уверенны в успешном завершении строительства и в обеспечении поселка всей необходимой инфраструктурой.
+							</p>
+						</div>
+					</div>
+				</section >
+
+
 				<? $aboutht = carbon_get_theme_option('about_home_title');
 				if (!empty($aboutht)) { ?>
 					<section id="about-project" class="about-project">
