@@ -5822,6 +5822,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
   .sert_blk img {
     max-width: 220px;
+    height: auto;
   }
 
   .sert_blk .foto {
