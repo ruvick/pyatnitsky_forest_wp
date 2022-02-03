@@ -74,6 +74,33 @@
 					</div>
 				</section>
 
+				<section id = "communications" class = "communications">
+					<div class="_container">
+						<h2 class="communications__title">Коммуникации и инфраструктура</h2>
+						<ul class="communications__list">
+							<li class="communications__list-item communications__list-item-icon-01">Детские игровые площадки</li>
+							<li class="communications__list-item communications__list-item-icon-02">Школа</li>
+							<li class="communications__list-item communications__list-item-icon-03">Охрана, видеонаблюдение</li>
+							<li class="communications__list-item communications__list-item-icon-04">Централизованное электроснабжение</li>
+							<li class="communications__list-item communications__list-item-icon-05">Детский сад и стадион</li>
+							<li class="communications__list-item communications__list-item-icon-06">Велосипедные и беговые дорожки</li>
+							<li class="communications__list-item communications__list-item-icon-07">Уличное освещение</li>
+							<li class="communications__list-item communications__list-item-icon-08">Ограждение жилого комплекса</li>
+							<li class="communications__list-item communications__list-item-icon-09">Централизованная канализация</li>
+							<li class="communications__list-item communications__list-item-icon-10">Дороги ко всему жилому комплексу</li>
+							<li class="communications__list-item communications__list-item-icon-11">Маршрутное такси</li>
+							<li class="communications__list-item communications__list-item-icon-12">Собственная управляющая компания</li>
+							<li class="communications__list-item communications__list-item-icon-13">Централизованное водоснабжение</li>
+							<li class="communications__list-item communications__list-item-icon-14">Зона для выгула собак</li>
+							<li class="communications__list-item communications__list-item-icon-15">Магазины</li>
+							<li class="communications__list-item communications__list-item-icon-16">Газ</li>
+							<li class="communications__list-item communications__list-item-icon-17">Озеленение комплекса (газоны, деревья,кустарники)</li>
+							<li class="communications__list-item communications__list-item-icon-18">Кафе</li>
+							<li class="communications__list-item communications__list-item-icon-19">Архитектурная подсветка домов и инфрастуктуры</li>
+						</ul>
+					</div>
+				</section >
+
 				<section id = "sertifikat_section" class = "sertifikat_section">
 					<div class="_container sert_blk">
 						<div class="foto">
