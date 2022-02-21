@@ -4160,7 +4160,19 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
       -ms-flex-align: center;
           align-items: center;
   padding: 0 25px 0 25px;
-  justify-content: center;
+  justify-content: space-between;
+}
+
+.remont {
+  padding: 0 25px 0 25px;
+  font-size: 12px;
+  text-align: left;
+}
+
+.remont_in_page {
+  padding: 0;
+  width: 100%;
+  margin-bottom:50px;
 }
 
 .house-card__price {
@@ -4169,7 +4181,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   font-weight: 500;
   color: #5baa00;
   margin-bottom: 3px;
-  display: none;
 }
 
 .house-card__price-old {
@@ -4602,7 +4613,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 .project-card__block-price {
-  margin-bottom: 50px;
+  margin-bottom: 10px;
 }
 
 .project-card__block-price-volume {
@@ -4634,7 +4645,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   font-weight: 500;
   color: #222222;
   margin-bottom: 10px;
-  display: none;
 }
 
 .project-card__block-price-number-old {

@@ -33,6 +33,10 @@
 								<p class="house-card__price"><? echo carbon_get_post_meta($pg->ID, "offer_price");?> р</p>
 								<!-- <p class="house-card__price-old"><? echo carbon_get_post_meta($pg->ID, "offer_old_price");?> р</p> -->
 							</div>
+							
+						</div>
+						<div class ="remont">
+								<? echo carbon_get_post_meta($pg->ID, "offer_remont");?>
 						</div>
 					</a>
 <?

@@ -53,6 +53,9 @@ get_header(); ?>
 							<!-- <p class="project-card__block-price-number-old">Цена без скидки: <span><?echo carbon_get_post_meta(get_the_ID(),"offer_old_price"); ?> р</span></p> -->
 						</div>
 					</div>
+					<div class ="remont remont_in_page">
+								<? echo carbon_get_post_meta(get_the_ID(), "offer_remont");?>
+					</div>
 					<div class="project-card__specific">
 						<div class="info__charact">
 							<?	$charact = carbon_get_post_meta(get_the_ID(),'complex_charact');

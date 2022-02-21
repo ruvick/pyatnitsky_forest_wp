@@ -120,6 +120,7 @@ Container::make('theme_options', __('Настройки темы', 'crb'))
       Field::make('text', 'offer_dop_text', 'Дополнительное описание')->set_width(50),
       Field::make('text', 'offer_price', 'Цена')->set_width(50),
       Field::make('text', 'offer_old_price', 'Цена без скидки')->set_width(100),
+      Field::make('text', 'offer_remont', 'Информация о ремонте')->set_width(100),
       
       Field::make('file', 'offer_video_str_1', 'Видео со стройки 1')->set_width(50),
       Field::make('file', 'offer_video_str_2', 'Видео со стройки 2')->set_width(50),

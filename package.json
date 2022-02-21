@@ -8,7 +8,7 @@
     "clear_r": "ssh a022forest@a022forest.beget.tech \"rm a022forest.beget.tech//public_html/wp-content/themes/pyatnitsky-forest/*.*\"",
     "send_r": "scp -C *.php *.png *.css a022forest@a022forest.beget.tech:a022forest.beget.tech//public_html/wp-content/themes/pyatnitsky-forest/",
     "send_ms": "scp -C *.css a022forest@a022forest.beget.tech:a022forest.beget.tech//public_html/wp-content/themes/pyatnitsky-forest/",
-    "send_one": "scp -C page-home.php a022forest@a022forest.beget.tech:a022forest.beget.tech//public_html/wp-content/themes/pyatnitsky-forest/",
+    "send_one": "scp -C page-house.php a022forest@a022forest.beget.tech:a022forest.beget.tech//public_html/wp-content/themes/pyatnitsky-forest/",
     "send_one1": "scp -C page-house.php a022forest@a022forest.beget.tech:a022forest.beget.tech//public_html/wp-content/themes/pyatnitsky-forest/",
     "send_head": "scp -C header.php a022forest@a022forest.beget.tech:a022forest.beget.tech//public_html/wp-content/themes/pyatnitsky-forest/",
     "send_cat": "scp -C category.php a022forest@a022forest.beget.tech:a022forest.beget.tech//public_html/wp-content/themes/pyatnitsky-forest/",
